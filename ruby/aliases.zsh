@@ -1,7 +1,7 @@
-alias r='rbenv local 1.8.7-p358'
+alias bil="bundle install"
+alias brake="bundle exec rake"
+alias be="bundle exec"
 
-alias sc='script/console'
-alias sg='script/generate'
-alias sd='script/destroy'
+alias sc='rails c'
 
 alias migrate='rake db:migrate db:test:clone'
