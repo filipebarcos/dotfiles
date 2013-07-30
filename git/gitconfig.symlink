@@ -1,6 +1,3 @@
-[hub]
-  protocol = https
-
 [user]
   name = Filipe Costa
   email = filipebarcos@gmail.com
