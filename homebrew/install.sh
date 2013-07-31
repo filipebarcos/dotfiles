@@ -14,6 +14,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark
+brew install grc coreutils spark apple-gcc42 libxml2 git rbenv ack tmux wget tig qt postgresql redis mysql
 
 exit 0
