@@ -1,0 +1,17 @@
+{
+  "new_file_syntax": "Ruby",
+  "syntaxes": [
+    {
+      "name": "Ruby on Rails snippets/Ruby on Rails",
+      "rules": [
+        {"file_name": "\\.rb$"}
+      ]
+    },
+    {
+      "name": "RSpec",
+      "rules": [
+        {"file_name": "_spec\\.rb$"}
+      ]
+    }
+  ]
+}
