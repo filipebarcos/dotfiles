@@ -8,3 +8,21 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+#Enable aliases to be sudo’ed
+alias sudo='sudo '
+alias workspace="cd ~/workspace"
+alias site="cd ~/workspace/filipebarcos.github.io"
+alias cls="clear"
+
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
+
+#OSX
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# IP addresses
+alias extip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias wifiip="ipconfig getifaddr en1"
+alias cableip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
