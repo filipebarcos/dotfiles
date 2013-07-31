@@ -1,4 +1,4 @@
-# --holman does dotfiles--
+# ~~holman does dotfiles~~
 # Filipe Costa uses holman's dotfiles :)
 
 ## install
