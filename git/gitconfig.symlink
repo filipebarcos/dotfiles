@@ -1,9 +1,9 @@
 [user]
-  name = Filipe Costa
-  email = filipebarcos@gmail.com
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 
 [credential]
-  helper = osxkeychain
+  helper = GIT_CREDENTIAL_HELPER
 
 [alias]
   co = checkout
