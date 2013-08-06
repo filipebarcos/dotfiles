@@ -1,4 +1,5 @@
+execute pathogen#infect()
 syntax on
+filetype plugin indent on
 
 " Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
