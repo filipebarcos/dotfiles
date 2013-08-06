@@ -15,6 +15,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -39,6 +40,8 @@ setopt complete_aliases
 
 zle -N newtab
 
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
