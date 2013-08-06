@@ -1,5 +1,8 @@
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
 
 " Wrap gitcommit file types at the appropriate length
+filetype plugin indent on
+
+" Auto open nerd tree if no file specified when opening vim
+autocmd vimenter * if !argc() | NERDTree | endif
