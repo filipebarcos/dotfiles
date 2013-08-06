@@ -1,8 +1,46 @@
-execute pathogen#infect()
+set nocompatible
+
+call pathogen#infect()
+call pathogen#helptags()
+
 syntax on
+compiler ruby
+
+set number
+set hlsearch
+set autoindent
+set complete-=i
+set showmatch
+set incsearch
+set background=dark
+set backspace=indent,eol,start
+set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+set wrap
 
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on
 
 " Auto open nerd tree if no file specified when opening vim
 autocmd vimenter * if !argc() | NERDTree | endif
+" other NERDTree configs
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nr :NERDTree<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+
+" Status line
+set laststatus=2
+set statusline=
+set statusline+=%<\                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
+set statusline+=%-40f\                    " relative path
+set statusline+=%=                        " seperate between right- and left-aligned
+set statusline+=%1*%y%*%*\                " file type
+set statusline+=%10(L(%l/%L)%)\           " line
+set statusline+=%2(C(%v/125)%)\           " column
+set statusline+=%P                        " percentage of file
+
+" Undo configs
+set undodir=~/.vim/undo
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
