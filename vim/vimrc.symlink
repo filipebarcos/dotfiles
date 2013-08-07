@@ -27,6 +27,12 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
+" CtrlP configs
+map <silent> <LocalLeader>ff :CtrlP<CR>
+map <silent> <LocalLeader>ft :CtrlPTag<CR>
+map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
+map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
+
 " Status line
 set laststatus=2
 set statusline=
