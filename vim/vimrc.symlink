@@ -32,6 +32,10 @@ map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>ft :CtrlPTag<CR>
 map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.bundle$\|\.svn$',
+    \ 'file': '\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
+    \ }
 
 " Status line
 set laststatus=2
