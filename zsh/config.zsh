@@ -43,6 +43,8 @@ zle -N newtab
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 bindkey '^[^[[D' backward-word
+bindkey '\e[1;5D' backward-word # have you ever heard about redundancy
 bindkey '^[^[[C' forward-word
+bindkey '\e[1;5C' forward-word # did you?
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
