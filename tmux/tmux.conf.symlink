@@ -1,0 +1,51 @@
+# Set prefix command to Control-\
+unbind-key C-b
+set -g prefix 'C-\'
+
+# C-\ C-\ jumps to the last open window
+bind-key C-\ last-window
+
+# Look good
+set-option -g default-terminal "screen-256color"
+
+# use C-b v to paste the tmux buffer
+bind v paste-buffer
+
+#faster ESC response
+set -s escape-time 0
+
+# Make shift+arrows, ctrl+arrows etc work in Vim.
+set -g xterm-keys on
+
+# C-\ C-\ cycles among panes
+# bind C-\ select-pane -t :.+
+
+# count new windows from 1
+set -g base-index 1
+
+# Set status bar
+set -g status-bg black
+set -g status-fg white
+set -g status-left ""
+set -g status-right "#[fg=green]#H #(date +'%a, %d %b %Y, %R')"
+
+# Highlight active window
+set-window-option -g window-status-current-bg green
+set-window-option -g window-status-current-fg black
+
+# vi mode
+bind-key -r j select-pane -U
+bind-key -r k select-pane -D
+bind-key -r h select-pane -L
+bind-key -r l select-pane -R
+
+# shell magic to distinguish C-arrow keys for pane commands
+# does not work
+#set -g terminal-overrides "*:kUP5=\eOA,*:kDN5=\eOB,*:kLFT5=\eOD,*:kRIT5=\eOC"
+
+# ssh interactive
+bind-key S command-prompt -p "ssh: " "new-window -n %1 'ssh %1'"
+set -g history-limit 10000
+
+# opens htop in a split pane
+bind-key H split-window -h 'htop'
