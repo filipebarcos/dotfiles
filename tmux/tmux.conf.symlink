@@ -15,7 +15,7 @@ bind v paste-buffer
 set -s escape-time 0
 
 # Make shift+arrows, ctrl+arrows etc work in Vim.
-set -g xterm-keys on
+set-window-option -g xterm-keys on
 
 # C-\ C-\ cycles among panes
 # bind C-\ select-pane -t :.+
