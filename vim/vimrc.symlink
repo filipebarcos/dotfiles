@@ -35,6 +35,10 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.log$\|\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
     \ }
 
+" Ack settings
+let g:AckAllFiles = 0
+let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
+
 " Tab mappings
 nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
@@ -45,6 +49,11 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><Space> :noh<CR>
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
+
+" Set up highlight group & retain through colorscheme changes
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Status line
 set laststatus=2
