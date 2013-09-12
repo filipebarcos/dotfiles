@@ -42,9 +42,19 @@ zle -N newtab
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-bindkey '^[^[[D' backward-word
-bindkey '\e[1;5D' backward-word # have you ever heard about redundancy
-bindkey '^[^[[C' forward-word
-bindkey '\e[1;5C' forward-word # did you?
-bindkey '^[[H' beginning-of-line
-bindkey '^[[F' end-of-line
+
+bindkey '^[[H'    beginning-of-line # fn + <-
+bindkey '^[[1~'   beginning-of-line # fn + <- (tmux)
+
+bindkey '^[[F'    end-of-line # fn + ->
+bindkey '^[[4~'   end-of-line # fn + -> (tmux)
+
+
+bindkey '^[[1;5D' backward-word # ctrl + <- (tmux and non-tmux)
+bindkey '^[[1;5C' forward-word  # ctrl + -> (tmux and non-tmux)
+
+bindkey '^[[1;3D' backward-word #alt + <- (tmux)
+bindkey '^[[1;3C' forward-word  #alt + -> (tmux)
+
+bindkey '^[^[[D' backward-word #alt + <-
+bindkey '^[^[[C' forward-word  #alt + ->
