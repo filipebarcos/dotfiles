@@ -5,17 +5,40 @@ call pathogen#helptags()
 
 syntax on
 compiler ruby
+colorscheme ir_black
 
-set number
-set hlsearch
 set autoindent
+
+set background=dark            " Set backgroung to dark
+set backspace=indent,eol,start " Intuitive backspacing
+
 set complete-=i
+
+set directory=~/tmp            " Defaul dir to swp files
+
+set hlsearch                   " Highlight matches
+set hidden                     " Handle multiple buffers better
+
+set incsearch                  " Highlight matches as you type
+
+set laststatus=2               " Show the status line all the time
+
+set nobackup                   " Don't make a backup before overwriting a file
+set nowritebackup              " Same as above
+set number                     " Set line numbers
+
+set scrolloff=3                " Show 3 lines of context around the cursor
+set showcmd                    " Display incomplete commands
 set showmatch
-set incsearch
-set background=dark
-set backspace=indent,eol,start
+set showmode                   " Display the mode you're in
+
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
-set wrap
+set title
+
+set visualbell                 " No beeping
+
+set wrap                       " Turn on line wrapping
+
 
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on
@@ -30,10 +53,7 @@ map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>ft :CtrlPTag<CR>
 map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.bundle$\|\.svn$',
-    \ 'file': '\.log$\|\.pyc$\|\.pyo$\|\.rbc$|\.rbo$\|\.class$\|\.o$\|\~$\',
-    \ }
+let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|.DS_STORE'
 
 " Ack settings
 let g:AckAllFiles = 0
