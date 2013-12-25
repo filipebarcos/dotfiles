@@ -5,7 +5,7 @@ call pathogen#helptags()
 
 syntax on
 compiler ruby
-colorscheme grb256
+colorscheme jellybeans
 
 set autoindent
 
