@@ -6,7 +6,7 @@
   "color_scheme": "Packages/Color Scheme - User/Espresso Soda.tmTheme",
   "create_window_at_startup": false,
   "drag_text": false,
-  "ensure_newline_at_eof_on_save": true,
+  "ensure_newline_at_eof_on_save": false,
   "fade_fold_buttons": true,
   "file_exclude_patterns":
   [
@@ -20,7 +20,8 @@
     ".git",
     ".sass-cache",
     "tmp",
-    ".vagrant"
+    ".vagrant",
+    ".zeus.sock"
   ],
   "font_face": "Menlo",
   "font_options":
