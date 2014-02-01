@@ -29,17 +29,18 @@ set-window-option -g xterm-keys on
 # count new windows from 1
 set -g base-index 1
 
-# set utf-8
-set -g status-utf8 on
+# start pane index at 1
+setw -g pane-base-index 1
 
-# Set status bar
-set -g status-bg '#5F5F61'
-set -g status-fg '#EEEEEE'
-set -g status-left ''
-set -g status-right "#[fg=#FFCBD7]#h: #(date +'%a, %b %d  %R')"
+# highlight window when it has new activity
+setw -g monitor-activity on
+set -g visual-activity on
+
+# re-number windows when one is closed
+set -g renumber-windows on
 
 # Highlight active window
-set-window-option -g window-status-current-bg '#A20B14'
+set-window-option -g window-status-current-bg '#0DAF58'
 set-window-option -g window-status-current-fg '#EEEEEE'
 
 # Line colors
@@ -62,3 +63,19 @@ set -g history-limit 10000
 
 # opens htop in a split pane
 bind-key H split-window -h 'htop'
+
+########################
+#### Set status bar ####
+########################
+
+set -g status-bg '#161613'
+set -g status-fg '#EBECD5'
+# center the status bar
+set -g status-justify left
+# set utf-8
+set -g status-utf8 on
+
+set -g status-left-length 40
+set -g status-left '#[fg=#0DAF58]#S#[fg=#EBECD5] #I:#P'
+
+set -g status-right "#[fg=#0DAF58]#h#[fg=#EBECD5]: #(date +'%a, %b %d  %R')"
