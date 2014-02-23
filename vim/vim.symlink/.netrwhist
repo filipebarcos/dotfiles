@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/filipecosta/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.0.2/lib'
+let g:netrw_dirhist_2='/Users/filipecosta/.dotfiles'
+let g:netrw_dirhist_3='/Users/filipecosta/tmp'

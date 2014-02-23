@@ -56,10 +56,6 @@ map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
 let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|.DS_STORE'
 
-" Ack settings
-let g:AckAllFiles = 0
-let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
-
 " Tab mappings
 nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
