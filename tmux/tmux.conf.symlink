@@ -6,7 +6,12 @@ set -g prefix 'C-\'
 bind-key C-\ last-window
 
 # After version 1.9m default-path was removed
-bind-key c  new-window -c "#{pane_current_path}"
+bind-key c new-window -c "#{pane_current_path}"
+bind-key % split-window -h -c "#{pane_current_path}"
+bind-key '"' split-window -v -c "#{pane_current_path}"
+
+# allow terminal scrolling
+set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 
 # Look good
 set -g default-terminal "screen-256color"
