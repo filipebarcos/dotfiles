@@ -29,7 +29,7 @@
   untracked = cyan
 
 [format]
-  pretty = format:'%C(red)%h%Creset - %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
+  pretty = format:'%C(red)%h%Creset: %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
 
 [core]
   excludesfile = ~/.gitignore
