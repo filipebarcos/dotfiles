@@ -69,7 +69,7 @@ rb_prompt() {
 }
 
 directory_name() {
-  echo "%{$fg_bold[cyan]%}%~%{$reset_color%}"
+  echo "(%{$fg_bold[white]%}%m:%{$fg_bold[yellow]%} %c%{$reset_color%})"
 }
 
 export PROMPT=$'$(directory_name)$(git_dirty)$(need_push)\$ '
