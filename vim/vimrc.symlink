@@ -1,7 +1,16 @@
-set nocompatible
+set nocompatible               " be iMproved (required)
+filetype off                   " (required)
 
-call pathogen#infect()
-call pathogen#helptags()
+" Vundle Config
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+" Wrap gitcommit file types at the appropriate length
+filetype plugin indent on " (required)
 
 syntax on
 compiler ruby
@@ -9,40 +18,26 @@ colorscheme grb256
 set t_Co=256
 
 set autoindent
-
 set background=dark            " Set backgroung to dark
 set backspace=indent,eol,start " Intuitive backspacing
-
 set complete-=i
-
 set directory=~/tmp            " Defaul dir to swp files
-
 set hlsearch                   " Highlight matches
 set hidden                     " Handle multiple buffers better
-
 set incsearch                  " Highlight matches as you type
-
 set laststatus=2               " Show the status line all the time
-
 set nobackup                   " Don't make a backup before overwriting a file
 set nowritebackup              " Same as above
 set number                     " Set line numbers
-
 set scrolloff=3                " Show 3 lines of context around the cursor
 set showcmd                    " Display incomplete commands
-set showmatch
+set showmatch                  " highlight match when found
 set showmode                   " Display the mode you're in
-
 set textwidth=0 nosmartindent tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set title
-
 set visualbell                 " No beeping
-
 set wrap                       " Turn on line wrapping
 
-
-" Wrap gitcommit file types at the appropriate length
-filetype plugin indent on
 
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
