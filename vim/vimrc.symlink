@@ -2,7 +2,7 @@ set nocompatible               " be iMproved (required)
 filetype off                   " (required)
 
 " Vundle Config
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 if filereadable(expand("~/.vimrc.bundles"))
