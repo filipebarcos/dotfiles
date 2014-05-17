@@ -1,6 +1,7 @@
 Plugin 'gmarik/vundle'
 
 Plugin 'rking/ag.vim'
+Plugin 'kurko/autocoder.vim'
 Plugin 'ctrlp.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'scrooloose/nerdtree'
