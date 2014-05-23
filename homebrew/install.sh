@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark apple-gcc42 libxml2 git rbenv ack tmux wget tig qt postgresql redis mysql
+brew install grc coreutils spark libxml2 git rbenv tmux wget tig qt postgresql redis mysql the_silver_searcher
 
 exit 0
