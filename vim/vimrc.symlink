@@ -14,7 +14,7 @@ filetype plugin indent on " (required)
 
 syntax on
 compiler ruby
-colorscheme ir_black
+colorscheme filipebarcos_ir_black
 set t_Co=256
 
 set autoindent
