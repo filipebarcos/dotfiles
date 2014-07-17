@@ -42,6 +42,11 @@ set visualbell                 " No beeping
 set wrap                       " Turn on line wrapping
 set cursorline
 
+set wildmenu                   " Enhanced command line completion
+set wildmode=list:longest,full " Complete files like shell
+
+set ignorecase                 " Case-insensitive searching
+set smartcase                  " Case-sensitive IF contains a capital letter
 
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
