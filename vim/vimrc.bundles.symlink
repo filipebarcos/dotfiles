@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'pgr0ss/vimux-ruby-test'
 Plugin 'jingweno/vimux-zeus'
 Plugin 'benmills/vimux'
+Plugin 'moll/vim-node'
 Plugin 'taglist.vim'
 
 " Color Schemes
