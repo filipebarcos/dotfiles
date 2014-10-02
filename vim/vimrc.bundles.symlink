@@ -25,6 +25,8 @@ Plugin 'jingweno/vimux-zeus'
 Plugin 'benmills/vimux'
 Plugin 'moll/vim-node'
 Plugin 'taglist.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'mattn/gist-vim'
 
 " Color Schemes
 Plugin 'lminaudier/grb256-vim'

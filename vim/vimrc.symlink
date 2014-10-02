@@ -84,6 +84,21 @@ nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><Space> :noh<CR>
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
 
+" use ; as :
+noremap ; :
+
+" I have to be forced to use hjkl
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+" helping with window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
