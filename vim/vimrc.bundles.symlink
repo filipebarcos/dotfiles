@@ -26,6 +26,7 @@ Plugin 'benmills/vimux'
 Plugin 'moll/vim-node'
 Plugin 'taglist.vim'
 Plugin 'Townk/vim-autoclose'
+Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
 " Color Schemes
