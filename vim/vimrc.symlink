@@ -50,8 +50,6 @@ set wildmode=longest,list:longest " Complete files like shell
 set complete=.,b,u,]                 " Current, buffers and tags
 set completeopt=menu,preview         " Default config, just being explicit
 set omnifunc=syntaxcomplete#Complete " Syntax completion enabled, depending on filetype
-" On insert hit TAB instead of ^N
-imap <Tab> <C-P>
 
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
