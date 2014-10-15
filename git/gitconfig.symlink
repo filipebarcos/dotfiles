@@ -49,3 +49,5 @@
 
 [push]
   default = simple
+[github]
+	user = filipebarcos
