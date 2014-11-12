@@ -21,9 +21,9 @@ git_dirty() {
   else
     if [[ "$st" =~ ^nothing ]]
     then
-      echo "(%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%})"
+      echo "(%{$fg[green]%}$(git_prompt_info)%{$reset_color%})"
     else
-      echo "(%{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%})"
+      echo "(%{$fg[red]%}$(git_prompt_info)%{$reset_color%})"
     fi
   fi
 }
@@ -69,7 +69,7 @@ rb_prompt() {
 }
 
 directory_name() {
-  echo "(%{$fg_bold[white]%}%m:%{$fg_bold[yellow]%} %c%{$reset_color%})"
+  echo "(%{$fg[white]%}%m:%{$fg[yellow]%} %c%{$reset_color%})"
 }
 
 export PROMPT=$'$(directory_name)$(git_dirty)$(need_push)\$ '
