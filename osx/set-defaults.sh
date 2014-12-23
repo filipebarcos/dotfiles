@@ -11,7 +11,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "filipebarcos"
+scutil --set ComputerName 'theAir'
+scutil --set HostName 'theAir'
+scutil --set LocalHostName 'theAir'
+defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'theAir'
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
@@ -45,11 +48,10 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 # Disable Resume system-wide
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-# Disable the crash reporter
-#defaults write com.apple.CrashReporter DialogType -string "none"
-
 # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
 echo "0x08000100:0" > ~/.CFUserTextEncoding
+# Allowing text selection in Quick Look/Preview in Finder by default
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
@@ -169,7 +171,7 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Icon-view: `icnv`
 # Column View: `clmv`
 # Coverflow: `Flwv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder FXPreferredViewStyle Clmv
 
 # Enable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool true
@@ -191,7 +193,7 @@ chflags nohidden ~/Library
 #defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 20
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -206,16 +208,15 @@ defaults write com.apple.dock launchanim -bool true
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Remove the auto-hiding Dock delay
-defaults write com.apple.Dock autohide-delay -float 0
-
-# Enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
-
-# Automatically hide and show the Dock
+defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-time-modifier -float 0
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# Enable the 2D Dock
+defaults write com.apple.dock no-glass -bool true
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
