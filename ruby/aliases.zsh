@@ -7,3 +7,4 @@ alias sc='rails c'
 alias migrate='rake db:migrate db:test:clone'
 
 alias zpec='zeus rspec spec/'
+alias zake='zeus rake'

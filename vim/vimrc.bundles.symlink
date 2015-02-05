@@ -28,6 +28,7 @@ Plugin 'taglist.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 " Color Schemes
 Plugin 'lminaudier/grb256-vim'
