@@ -2,6 +2,7 @@ Plugin 'gmarik/vundle'
 
 Plugin 'rking/ag.vim'
 Plugin 'ctrlp.vim'
+Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'

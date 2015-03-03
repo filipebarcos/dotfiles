@@ -62,7 +62,9 @@ map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>ft :CtrlPTag<CR>
 map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
-let g:ctrlp_custom_ignore = 'tmp\|logs\|vendor/assets\|vendor/bundle\|vendor/plugins\|spec/cassett\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|\.DS_STORE\|\.beam\|tags'
+let g:ctrlp_custom_ignore = 'tmp\|logs\|log\|vendor/assets\|vendor/bundle\|vendor/plugins\|\.git\|cassett\|/.git\|/app/assets/image\|/coverage\|\.DS_STORE\|\.beam\|tags'
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden -g ""'
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Tab mappings
 nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
