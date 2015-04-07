@@ -24,6 +24,7 @@ Plugin 'taglist.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
+Plugin 'rust-lang/rust.vim'
 
 " Color Schemes
 Plugin 'lminaudier/grb256-vim'
