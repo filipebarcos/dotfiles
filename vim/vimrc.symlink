@@ -77,7 +77,7 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 " VRoom configs
 let g:vroom_map_keys = 0
 let g:vroom_write_all = 1
-let g:vroom_use_vimux = 1 " this is the default config, leaving here to remember I can use with vimux :D
+let g:vroom_use_vimux = 0 " this is the default config, leaving here to remember I can use with vimux :D
 map <silent> <LocalLeader>rl :VroomRunLastTest<CR>
 map <silent> <LocalLeader>rb :VroomRunTestFile<CR>
 map <silent> <LocalLeader>rf :VroomRunNearestTest<CR>
