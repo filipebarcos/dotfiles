@@ -35,7 +35,7 @@ copy_dotfiles () {
     dest="$HOME/.`basename \"${source%.*}\"`"
 
 
-    if [ -f $dest ]
+    if [ -f $dest ] || [ -d $dest ]
     then
       rm -rf $dest
     fi
