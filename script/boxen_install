@@ -4,19 +4,8 @@ DOTFILES_ROOT="`pwd`"
 
 set -e
 
-echo ''
-
-info () {
-  printf "  [ \033[00;34m..\033[0m ] $1"
-}
-
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
-}
-
 link_files () {
   ln -s $1 $2
-  success "linked $1 to $2"
 }
 
 install_vundle() {
@@ -28,8 +17,6 @@ install_vundle() {
 }
 
 copy_dotfiles () {
-  info 'installing dotfiles'
-
   for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
   do
     dest="$HOME/.`basename \"${source%.*}\"`"
@@ -47,5 +34,3 @@ copy_dotfiles () {
 copy_dotfiles
 install_vundle
 
-echo ''
-echo '  All installed!'
