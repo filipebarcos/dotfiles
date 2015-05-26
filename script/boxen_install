@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+DOTFILES_ROOT="`pwd`"
+
+set -e
+
+echo ''
+
+info () {
+  printf "  [ \033[00;34m..\033[0m ] $1"
+}
+
+link_files () {
+  ln -s $1 $2
+  success "linked $1 to $2"
+}
+
+install_vundle() {
+  if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/Vundle.vim
+  fi
+  
+  vim +BundleInstall +qall
+}
+
+copy_dotfiles () {
+  info 'installing dotfiles'
+
+  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  do
+    dest="$HOME/.`basename \"${source%.*}\"`"
+
+    link_files $source $dest
+  done
+}
+
+copy_dotfiles
+install_vundle
+
+echo ''
+echo '  All installed!'
