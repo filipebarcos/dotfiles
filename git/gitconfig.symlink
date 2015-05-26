@@ -32,7 +32,7 @@
   pretty = format:'%C(red)%h%Creset: %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
 
 [core]
-  excludesfile = ~/.gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
   editor = vim
 
 [apply]
