@@ -37,7 +37,7 @@ run_installers () {
 
   for installer in $installers
   do
-    sh $DOTFILES_ROOT/$installer
+    sh -c "${DOTFILES_ROOT}/${installer}"
   done
 }
 
