@@ -11,9 +11,8 @@ link_files () {
 install_vundle() {
   if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/Vundle.vim
+    vim +BundleInstall +qall
   fi
-
-  vim +BundleInstall +qall
 }
 
 copy_dotfiles () {
@@ -31,6 +30,17 @@ copy_dotfiles () {
   done
 }
 
+run_installers () {
+  installers=(
+    'vim/install.sh'
+  )
+
+  for installer in $installers
+  do
+    sh $DOTFILES_ROOT/$installer
+  done
+}
+
 copy_dotfiles
 install_vundle
-
+run_installers
