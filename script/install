@@ -3,6 +3,10 @@
 # Run all dotfiles installers.
 
 set -e
+DOTFILES_ROOT="`pwd`"
+
+sh -c "$DOTFILES_ROOT/script/bootstrap"
+echo "Done bootstraping dotfiles..."
 
 cd "$(dirname $)"/..
 
