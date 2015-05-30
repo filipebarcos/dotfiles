@@ -4,3 +4,4 @@
 *.swp
 *.rbc
 doc/tags
+ctags

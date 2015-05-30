@@ -13,6 +13,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark libxml2 git rbenv ruby-build tmux wget tig qt postgresql redis mysql the_silver_searcher reattach-to-user-namespace
+brew install grc coreutils spark libxml2 git rbenv ruby-build tmux wget tig qt postgresql redis the_silver_searcher reattach-to-user-namespace
 
 exit 0

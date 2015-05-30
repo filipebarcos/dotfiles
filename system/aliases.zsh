@@ -11,10 +11,8 @@ fi
 #Enable aliases to be sudo’ed
 alias sudo='sudo '
 alias workspace="cd ~/workspace"
-alias site="cd ~/workspace/filipebarcos.github.io"
+alias src="cd ~/src"
 alias cls="clear"
-
-alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
 
 #OSX
 # Show/hide hidden files in Finder
