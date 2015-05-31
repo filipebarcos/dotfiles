@@ -9,8 +9,8 @@ link_files () {
 }
 
 install_vundle() {
-  if [ ! -d $HOME/.vim/bundle/Vundle.vim ]; then
-    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/Vundle.vim
+  if [ ! -d $HOME/.vim/bundle/vundle ]; then
+    git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
     vim +BundleInstall +qall
   fi
 }
@@ -19,7 +19,6 @@ link_dotfiles () {
   for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
   do
     dest="$HOME/.`basename \"${source%.*}\"`"
-
 
     if [ -f $dest ] || [ -d $dest ]
     then

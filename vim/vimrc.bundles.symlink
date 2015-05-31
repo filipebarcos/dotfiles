@@ -1,3 +1,5 @@
+call vundle#begin()
+
 Plugin 'gmarik/vundle'
 
 Plugin 'rking/ag.vim'
@@ -26,3 +28,5 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
 Plugin 'rust-lang/rust.vim'
+
+call vundle#end()

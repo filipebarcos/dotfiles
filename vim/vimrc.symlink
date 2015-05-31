@@ -5,14 +5,11 @@ set nocompatible               " be iMproved (required)
 filetype off                   " (required)
 
 " Vundle Config
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/bundle/vundle
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
-
-call vundle#end()
 
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on " (required)
