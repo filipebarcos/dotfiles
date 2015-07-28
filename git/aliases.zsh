@@ -14,3 +14,6 @@ alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
 alias whatlast="git show HEAD"
 alias ci="git commit"
 alias st="git status"
+
+# hub related aliases
+alias pr="hub pull-reques"
