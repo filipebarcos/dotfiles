@@ -11,6 +11,7 @@ fi
 #Enable aliases to be sudo’ed
 alias sudo='sudo '
 alias workspace="cd ~/workspace"
+alias dot="cd ~/.dotfiles"
 alias src="cd ~/src"
 alias cls="clear"
 

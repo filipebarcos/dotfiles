@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Opens git rebase -i
+#
+# $1 - number of commits to be rebased -i
+#
+# Examples
+#
+#   git-squash 5
+
+git rebase -i @~$1
