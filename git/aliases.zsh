@@ -11,10 +11,12 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 
+alias gwip="git commit -m 'wip'"
+
 alias facepunch="git push -f"
 alias whatlast="git show HEAD"
 alias ci="git commit"
 alias st="git status"
 
 # hub related aliases
-alias pr="hub pull-reques"
+alias pr="hub pull-request"
