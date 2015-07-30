@@ -12,8 +12,8 @@ alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
 
 alias gwip="git commit -m 'wip'"
-
-alias facepunch="git push -f"
+alias gp="git rev-parse --abbrev-ref HEAD | git push -u origin $1"
+alias gforce="git push -f"
 alias whatlast="git show HEAD"
 alias ci="git commit"
 alias st="git status"
