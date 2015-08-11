@@ -73,7 +73,7 @@ if exists("syntax_on")
   hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
 
   hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
-  hi LineNr           guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=NONE        cterm=NONE
+  hi LineNr           guifg=white       guibg=NONE        gui=NONE      ctermfg=white       ctermbg=233         cterm=NONE
 
   hi VertSplit        guifg=#404040     guibg=#404040     gui=NONE      ctermfg=darkgray    ctermbg=238         cterm=NONE
   hi StatusLine       guifg=darkgreen   guibg=#303030     gui=NONE      ctermfg=darkgreen   ctermbg=236         cterm=NONE
@@ -97,8 +97,8 @@ if exists("syntax_on")
   " Message displayed in lower left, such as --INSERT--
   hi ModeMsg          guifg=#303030     guibg=darkgreen   gui=BOLD      ctermfg=236         ctermbg=darkgreen   cterm=BOLD
 
-  hi CursorLine       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=233         cterm=NONE
-  hi CursorLineNr     guifg=NONE        guibg=#121212     gui=BOLD      ctermfg=red         ctermbg=NONE        cterm=BOLD
+  hi CursorLine       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=235         cterm=NONE
+  hi CursorLineNr     guifg=NONE        guibg=#121212     gui=BOLD      ctermfg=red         ctermbg=235         cterm=BOLD
   hi CursorColumn     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen       guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   " hi Search         guifg=NONE        guibg=#2f2f00     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
@@ -201,13 +201,3 @@ if exists("syntax_on")
   " Special for Javascript
   hi link javaScriptNumber      Number
 
-
-  " Special for Python
-  "hi  link pythonEscape         Keyword
-
-
-  " Special for CSharp
-  hi  link csXmlTag             Keyword
-
-
-  " Special for PHP
