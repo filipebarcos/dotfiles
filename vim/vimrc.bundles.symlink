@@ -29,6 +29,5 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
 Plugin 'rust-lang/rust.vim'
-Plugin 'unblevable/quick-scope'
 
 call vundle#end()
