@@ -86,6 +86,9 @@ nnoremap <silent> <LocalLeader>q :q<CR>
 map <silent> <LocalLeader>t :call RunTestFile()<CR>
 map <silent> <LocalLeader>r :call RunNearestTest()<CR>
 
+" Copy to system clipboard (ctrl+c on visual mode)
+vmap <C-c> "*y
+
 " Vimux
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
 
