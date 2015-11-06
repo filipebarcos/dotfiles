@@ -40,6 +40,7 @@ set visualbell                 " No beeping
 set wrap                       " Turn on line wrapping
 set cursorline
 set ttyfast                    " Blazing fast scroll
+set lazyredraw                 " to avoid scrolling problems
 
 set ignorecase                 " Case-insensitive searching
 set smartcase                  " Case-sensitive IF contains a capital letter
@@ -50,12 +51,6 @@ set wildmode=longest,list:longest " Complete files like shell
 set complete=.,b,u,]                 " Current, buffers and tags
 set completeopt=menu,preview         " Default config, just being explicit
 set omnifunc=syntaxcomplete#Complete " Syntax completion enabled, depending on filetype
-
-" other NERDTree configs
-map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-let NERDTreeIgnore = ['\.beam$', 'tags']
 
 " CtrlP configs
 map <silent> <LocalLeader>ff :CtrlP<CR>
