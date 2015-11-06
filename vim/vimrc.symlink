@@ -39,6 +39,7 @@ set title
 set visualbell                 " No beeping
 set wrap                       " Turn on line wrapping
 set cursorline
+set ttyfast                    " Blazing fast scroll
 
 set ignorecase                 " Case-insensitive searching
 set smartcase                  " Case-sensitive IF contains a capital letter
