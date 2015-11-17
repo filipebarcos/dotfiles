@@ -52,6 +52,11 @@ set complete=.,b,u,]                 " Current, buffers and tags
 set completeopt=menu,preview         " Default config, just being explicit
 set omnifunc=syntaxcomplete#Complete " Syntax completion enabled, depending on filetype
 
+" With this config, I can za and hide indented content
+set foldmethod=indent
+set foldlevelstart=99
+set foldlevel=99
+
 " CtrlP configs
 map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>ft :CtrlPTag<CR>
