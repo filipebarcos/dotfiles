@@ -57,6 +57,12 @@ set foldmethod=indent
 set foldlevelstart=99
 set foldlevel=99
 
+" other NERDTree configs
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nr :NERDTree<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeIgnore = ['\.beam$', 'tags']
+
 " CtrlP configs
 map <silent> <LocalLeader>ff :CtrlP<CR>
 map <silent> <LocalLeader>ft :CtrlPTag<CR>
