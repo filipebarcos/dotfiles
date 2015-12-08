@@ -80,6 +80,6 @@ set -g status-justify left
 set -g status-utf8 on
 
 set -g status-left-length 40
-set -g status-left '#[fg=#0DAF58]#S#[fg=#EBECD5] #I:#P'
+set -g status-left '#[fg=#0DAF58]#S#[default] #I:#P'
 
-set -g status-right "#[fg=#0DAF58]#h#[fg=#EBECD5]: #(date +'%a, %b %d  %R')"
+set -g status-right "#[fg=#0DAF58]#h#[default]: #(date +'%a, %b %d  %R')"
