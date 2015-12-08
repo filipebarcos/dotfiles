@@ -82,6 +82,9 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 
 " general mappings
 nnoremap <silent> <LocalLeader>q :q<CR>
+cabbrev ag Ag
+cabbrev W w
+cabbrev Q q
 
 " " VRoom configs
 " let g:vroom_map_keys = 0
