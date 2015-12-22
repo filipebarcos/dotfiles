@@ -90,11 +90,11 @@ cabbrev Q q
 " let g:vroom_map_keys = 0
 " let g:vroom_write_all = 1
 " let g:vroom_use_vimux = 0 " this is the default config, leaving here to remember I can use with vimux :D
-" map <silent> <LocalLeader>rl :VroomRunLastTest<CR>
-" map <silent> <LocalLeader>rb :VroomRunTestFile<CR>
-" map <silent> <LocalLeader>rf :VroomRunNearestTest<CR>
-map <silent> <LocalLeader>t :call RunTestFile()<CR>
-map <silent> <LocalLeader>r :call RunNearestTest()<CR>
+map <silent> <LocalLeader>l :VroomRunLastTest<CR>
+map <silent> <LocalLeader>t :VroomRunTestFile<CR>
+map <silent> <LocalLeader>r :VroomRunNearestTest<CR>
+" map <silent> <LocalLeader>t :call RunTestFile()<CR>
+" map <silent> <LocalLeader>r :call RunNearestTest()<CR>
 
 " Copy to system clipboard (ctrl+c on visual mode)
 vmap <C-c> "*y
