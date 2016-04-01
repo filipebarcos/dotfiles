@@ -19,6 +19,7 @@ alias ci="git commit"
 alias st="git status"
 alias master="git checkout master"
 alias back="git checkout -"
+alias grebase="git checkout master && git pull && git checkout - && git rebase master"
 
 # hub related aliases
 alias pr="hub pull-request"
