@@ -63,7 +63,7 @@ bind-key -r l select-pane -R
 
 # ssh interactive
 bind-key S command-prompt -p "ssh: " "new-window -n %1 'ssh %1'"
-set -g history-limit 10000
+set -g history-limit 30000
 
 # opens htop in a split pane
 bind-key H split-window -h 'htop'
@@ -77,7 +77,7 @@ set -g status-fg '#EBECD5'
 # center the status bar
 set -g status-justify left
 # set utf-8
-set -g status-utf8 on
+set -gq status-utf8 on
 
 set -g status-left-length 40
 set -g status-left '#[fg=#0DAF58]#S#[default] #I:#P'
