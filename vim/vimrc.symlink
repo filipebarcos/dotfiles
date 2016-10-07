@@ -167,3 +167,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Disable Autocomment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Make Ctags
+command! MakeTags !ctags -R .
