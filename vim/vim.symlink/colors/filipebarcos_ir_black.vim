@@ -97,8 +97,8 @@ if exists("syntax_on")
   " Message displayed in lower left, such as --INSERT--
   hi ModeMsg          guifg=#303030     guibg=darkgreen   gui=BOLD      ctermfg=236         ctermbg=darkgreen   cterm=BOLD
 
-  hi CursorLine       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=235         cterm=NONE
-  hi CursorLineNr     guifg=NONE        guibg=#121212     gui=BOLD      ctermfg=red         ctermbg=235         cterm=BOLD
+  hi CursorLine       guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=236         cterm=NONE
+  hi CursorLineNr     guifg=NONE        guibg=#121212     gui=BOLD      ctermfg=red         ctermbg=236         cterm=BOLD
   hi CursorColumn     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen       guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   " hi Search         guifg=NONE        guibg=#2f2f00     gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
