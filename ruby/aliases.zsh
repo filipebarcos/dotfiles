@@ -2,7 +2,8 @@ alias bil="bundle install"
 alias brake="bundle exec rake"
 alias be="bundle exec"
 
-alias rc='rails c'
+alias rc='be rails c'
+alias rs='be rails s'
 
 alias migrate='bundle exec rake db:migrate db:test:clone'
 alias rrst='bundle exec rake db:reset'
