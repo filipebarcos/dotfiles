@@ -7,7 +7,7 @@ alias ras='be rails s'
 
 alias migrate='bundle exec rake db:migrate db:test:clone'
 alias rrst='bundle exec rake db:reset'
-alias bspec='be rspec spec/'
+alias br='be rspec spec/'
 
 
 alias zpec='zeus rspec spec/'
