@@ -24,4 +24,6 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
 
+Plugin 'dracula/vim'
+
 call vundle#end()
