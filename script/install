@@ -5,6 +5,10 @@
 set -e
 DOTFILES_ROOT="`pwd`"
 
+echo "Linking files..."
+sh -c "$DOTFILES_ROOT/script/link"
+echo "Done linking files..."
+
 sh -c "$DOTFILES_ROOT/script/bootstrap"
 echo "Done bootstraping dotfiles..."
 

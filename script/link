@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+DOTFILES_ROOT="`pwd`"
+
+set -e
+
+link_files () {
+  ln -s $1 $2
+}
+
+link_dotfiles () {
+  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  do
+    dest="$HOME/.`basename \"${source%.*}\"`"
+
+    if [ -f $dest ] || [ -d $dest ]
+    then
+      rm -rf $dest
+    fi
+
+    link_files $source $dest
+  done
+}
+
+link_dotfiles
