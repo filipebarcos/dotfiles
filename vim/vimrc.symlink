@@ -11,6 +11,11 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+" Load my snippets
+if filereadable(expand("~/.vimrc.snippets"))
+  source ~/.vimrc.snippets
+endif
+
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on " (required)
 
@@ -148,7 +153,6 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 " Setup vim-jsx plugin to allow jsx syntax on .js files
 let g:jsx_ext_required = 0
-
 
 " FUNCTIONS
 
