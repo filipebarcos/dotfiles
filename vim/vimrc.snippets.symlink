@@ -2,3 +2,4 @@ nnoremap ,log :-1read $HOME/.vim/snippets/console.log.snippet<CR>f(a
 nnoremap ,pry :-1read $HOME/.vim/snippets/binding.pry.snippet<CR>A<S-Enter><Esc>
 nnoremap ,rcc :-1read $HOME/.vim/snippets/react_class_component.snippet<CR>
 nnoremap ,rfc :-1read $HOME/.vim/snippets/react_functional_component.snippet<CR>
+nnoremap ,cf :-1read $HOME/.vim/snippets/const_func.snippet<CR>wcw
