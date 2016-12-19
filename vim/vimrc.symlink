@@ -103,6 +103,7 @@ map <silent> <LocalLeader>r :VroomRunNearestTest<CR>
 
 " Copy to system clipboard (ctrl+c on visual mode)
 vmap <C-c> "*y
+vmap \\ :Commentary<CR>
 
 " Vimux
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
