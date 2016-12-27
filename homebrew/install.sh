@@ -21,6 +21,6 @@ fi
 # Install homebrew packages
 brew install zsh grc coreutils spark libxml2 git rbenv ruby-build tmux wget tig postgresql redis the_silver_searcher reattach-to-user-namespace
 
-brew cask install slack dropbox google-chrome atom flux omnigraffle skype spotify vlc amphetamine evernote osxfuse telegram appcleaner firefox screenhero iterm2 spectacle the-unarchiver
+brew cask install slack dropbox google-chrome atom flux omnigraffle skype spotify vlc evernote osxfuse telegram appcleaner firefox screenhero iterm2 spectacle the-unarchiver
 
 exit 0
