@@ -19,8 +19,6 @@ then
 fi
 
 # Install homebrew packages
-brew install zsh doxygen grc coreutils spark libxml2 git rbenv ruby-build tmux wget tig postgresql redis the_silver_searcher reattach-to-user-namespace
 
-brew cask install slack dropbox google-chrome atom flux omnigraffle skype spotify vlc evernote osxfuse telegram appcleaner firefox screenhero iterm2 spectacle the-unarchiver
-
+brew bundle exec -- bundle install
 exit 0
