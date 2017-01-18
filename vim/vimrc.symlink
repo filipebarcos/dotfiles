@@ -154,6 +154,8 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 " Setup vim-jsx plugin to allow jsx syntax on .js files
 let g:jsx_ext_required = 0
+" Setup syntax highlight for flowtype
+let g:javascript_plugin_flow = 1
 
 " FUNCTIONS
 
@@ -172,6 +174,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Disable Autocomment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
+
 
 " Make Ctags
 command! MakeTags !ctags -R .
