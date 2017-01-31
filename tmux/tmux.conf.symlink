@@ -16,11 +16,11 @@ set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
 # Look good
 set -g default-terminal "screen-256color"
 
-# copy and paster
-set -g default-command "reattach-to-user-namespace -l zsh"
-
 #zsh
 set -g default-shell $SHELL
+
+# copy and paster
+set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 
 # after copying to a tmux buffer, hit y again to copy to clipboard
 bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
