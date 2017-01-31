@@ -66,7 +66,8 @@ set foldlevel=99
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-let NERDTreeIgnore = ['\.beam$', 'tags']
+let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$']
+let NERDTreeShowHidden = 1
 
 " CtrlP configs
 map <silent> <LocalLeader>ff :CtrlP<CR>
@@ -102,7 +103,8 @@ map <silent> <LocalLeader>r :VroomRunNearestTest<CR>
 " map <silent> <LocalLeader>r :call RunNearestTest()<CR>
 
 " Copy to system clipboard (ctrl+c on visual mode)
-vmap <C-c> "*y
+set clipboard=unnamed
+vnoremap <C-c> "*y
 vmap \\ :Commentary<CR>
 
 " Vimux
