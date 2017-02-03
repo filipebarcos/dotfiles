@@ -6,6 +6,6 @@
 #
 # Examples
 #
-#   git-squash 5
+#   git-rebase 5
 
 git rebase -i @~$1
