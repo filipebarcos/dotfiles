@@ -4,3 +4,4 @@ nnoremap ,rcc :-1read $HOME/.vim/snippets/react_class_component.snippet<CR>
 nnoremap ,rfc :-1read $HOME/.vim/snippets/react_functional_component.snippet<CR>
 nnoremap ,cf :-1read $HOME/.vim/snippets/const_func.snippet<CR>wcw
 nnoremap ,ijs :-1read $HOME/.vim/snippets/it.js.snippet<CR>f'a
+nnoremap ,djs :-1read $HOME/.vim/snippets/describe.js.snippet<CR>f'a
