@@ -24,7 +24,8 @@ Plugin 'taglist.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
+Plugin 'vim-airline/vim-airline'
 
-Plugin 'dracula/vim'
+Plugin 'rakr/vim-one'
 
 call vundle#end()

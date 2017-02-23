@@ -21,7 +21,7 @@ filetype plugin indent on " (required)
 
 syntax on
 compiler ruby
-color dracula
+colorscheme one
 set t_Co=256
 
 set autoindent
@@ -136,17 +136,8 @@ match ExtraWhitespace /\s\+$/
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
-" Status line
-set laststatus=2
-set statusline=
-set statusline+=%<\                       " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\        " buffer number, and flags
-set statusline+=%-40f\                    " relative path
-set statusline+=%=                        " seperate between right- and left-aligned
-set statusline+=%1*%y%*%*\                " file type
-set statusline+=%10(L(%l/%L)%)\           " line
-set statusline+=%2(C(%v/125)%)\           " column
-set statusline+=%P                        " percentage of file
+" Airline config
+let g:airline_extensions = [ 'ctrlp' ]
 
 " Undo configs
 set undodir=~/.vim/undo
@@ -158,6 +149,15 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 let g:jsx_ext_required = 0
 " Setup syntax highlight for flowtype
 let g:javascript_plugin_flow = 1
+
+" Setup for vim-one
+" Credit joshdick
+" Use 24-bit (true-color) mode in Vim when outside tmux.
+if (empty($TMUX))
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 " FUNCTIONS
 
