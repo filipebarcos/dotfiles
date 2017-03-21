@@ -64,8 +64,6 @@ set foldlevel=99
 
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
-map <silent> <LocalLeader>nr :NERDTree<CR>
-map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$', '\.DS_Store$']
 let NERDTreeShowHidden = 1
 
@@ -81,7 +79,6 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Tab mappings
-nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
 nnoremap <silent> <LocalLeader>[ :tabp<CR>
 nnoremap <silent> <LocalLeader>] :tabn<CR>
@@ -111,6 +108,7 @@ vmap \\ :Commentary<CR>
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
 
 " a fill more shortcuts
+nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><Space> :noh<CR>
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
