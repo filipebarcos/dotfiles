@@ -73,7 +73,7 @@ map <silent> <LocalLeader>ft :CtrlPTag<CR>
 map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
 map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|node_modules|tmp|log|bower_components|vcr)',
+  \ 'dir': '\v[\/](\.git|node_modules|tmp|log|bower_components|vcr)$',
   \ 'file': 'tags$\|\v\.(DS_Store|beam|zip|so|png|jpg|gif|svg)$',
   \ }
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
