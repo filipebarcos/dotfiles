@@ -1,3 +1,5 @@
 alias d='docker'
 alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dcr='docker-compose run'
 alias dm='docker-machine'
