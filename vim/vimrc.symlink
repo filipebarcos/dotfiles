@@ -18,21 +18,32 @@ endif
 
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on " (required)
-
-syntax on
 compiler ruby
-colorscheme dracula
+
+"I look good!
+syntax on
 set t_Co=256 " For 256 colors
+
+if has('nvim')
+  colorscheme one
+  set termguicolors
+  let $nvim_tui_enable_true_color=1
+else
+  colorschem dracula
+endif
+
+" Disable swap files
+set noswapfile
+set nobackup
+set nowb
 
 set autoindent
 set background=dark            " Set backgroung to dark
 set backspace=indent,eol,start " Intuitive backspacing
-set directory=~/tmp            " Defaul dir to swp files
 set hlsearch                   " Highlight matches
 set hidden                     " Handle multiple buffers better
 set incsearch                  " Highlight matches as you type
 set laststatus=2               " Show the status line all the time
-set nobackup                   " Don't make a backup before overwriting a file
 set nowritebackup              " Same as above
 set number                     " Set line numbers
 set scrolloff=3                " Show 3 lines of context around the cursor
