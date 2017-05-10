@@ -27,5 +27,6 @@ Plugin 'tmhedberg/matchit'
 Plugin 'vim-airline/vim-airline'
 
 Plugin 'rakr/vim-one'
+Plugin 'dracula/vim'
 
 call vundle#end()

@@ -21,8 +21,8 @@ filetype plugin indent on " (required)
 
 syntax on
 compiler ruby
-colorscheme one
-set t_Co=256
+colorscheme dracula
+set t_Co=256 " For 256 colors
 
 set autoindent
 set background=dark            " Set backgroung to dark
@@ -147,15 +147,6 @@ set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 let g:jsx_ext_required = 0
 " Setup syntax highlight for flowtype
 let g:javascript_plugin_flow = 1
-
-" Setup for vim-one
-" Credit joshdick
-" Use 24-bit (true-color) mode in Vim when outside tmux.
-if (empty($TMUX))
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
 " FUNCTIONS
 

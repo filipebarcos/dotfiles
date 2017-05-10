@@ -1,20 +1,19 @@
-# Set prefix command to Control-\
-unbind-key C-b
-set -g prefix 'C-\'
+# Set prefix command to Backtick (`)
+unbind C-b
+set-option -g prefix `
 
 # C-\ C-\ jumps to the last open window
-bind-key C-\ last-window
+bind-key ` last-window
 
 # After version 1.9m default-path was removed
 bind-key c new-window -c "#{pane_current_path}"
-bind-key % split-window -h -c "#{pane_current_path}"
-bind-key '"' split-window -v -c "#{pane_current_path}"
+bind-key | split-window -h -c "#{pane_current_path}"
+bind-key - split-window -v -c "#{pane_current_path}"
 
-# allow terminal scrolling
-set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'
-
-# Look good
+# Default terminal is 256 colors
 set -g default-terminal "screen-256color"
+# Add truecolor support
+set -ga terminal-overrides ",xterm-256color:Tc"
 
 #zsh
 set -g default-shell $SHELL
@@ -57,10 +56,6 @@ bind-key -r k select-pane -D
 bind-key -r h select-pane -L
 bind-key -r l select-pane -R
 
-# shell magic to distinguish C-arrow keys for pane commands
-# does not work
-#set -g terminal-overrides "*:kUP5=\eOA,*:kDN5=\eOB,*:kLFT5=\eOD,*:kRIT5=\eOC"
-
 # ssh interactive
 bind-key S command-prompt -p "ssh: " "new-window -n %1 'ssh %1'"
 set -g history-limit 30000
@@ -81,5 +76,4 @@ set -gq status-utf8 on
 
 set -g status-left-length 40
 set -g status-left '#[fg=#0DAF58]#S#[default] #I:#P'
-
 set -g status-right "#[fg=#0DAF58]#h#[default]: #(date +'%a, %b %d  %R')"
