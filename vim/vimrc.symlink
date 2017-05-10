@@ -92,7 +92,12 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.git|node_modules|tmp|log|bower_components|vcr)$',
   \ 'file': 'tags$\|\v\.(DS_Store|beam|zip|so|png|jpg|gif|svg)$',
   \ }
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+
+" ctrlp-cmatch still does not support
+" https://github.com/JazzCore/ctrlp-cmatcher/issues/35
+if !has('nvim')
+  let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
+endif
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
