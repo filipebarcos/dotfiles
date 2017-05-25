@@ -3,7 +3,9 @@ if [[ ! -o interactive ]]; then
 fi
 
 compctl -K _use use
-compctl -K _dat dat
 
 _use() { reply=(`docker-machine ls -q`); }
-_dat() { reply=(`docker ps --format "{{.Names}}"`); }
+
+compctl -K _dat dat
+
+_dat() { reply=(`docker ps --format "{{.Names}}"`) }

@@ -3,6 +3,11 @@ use () {
   eval "$(docker-machine env $1)"
 }
 
-dat () {
-  eval "$(docker attach $1)"
+function dat () {
+  if [[! -f "var/run/docker.sock" ]]; then
+    printf "Sorry, docker is not running!"
+    return 1
+  fi
+
+  docker attach $1
 }
