@@ -4,7 +4,7 @@ use () {
 }
 
 function dat () {
-  if [[! -f "var/run/docker.sock" ]]; then
+  if ! [[ -a "/var/run/docker.sock" ]]; then
     printf "Sorry, docker is not running!"
     return 1
   fi
