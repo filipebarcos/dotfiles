@@ -15,7 +15,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'skalnik/vim-vroom'
 Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'moll/vim-node'
 Plugin 'scrooloose/nerdtree'
@@ -26,7 +26,8 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
 Plugin 'vim-airline/vim-airline'
 
-Plugin 'rakr/vim-one'
+Plugin 'trevordmiller/nova-vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'dracula/vim'
 
 call vundle#end()
