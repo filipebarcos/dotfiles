@@ -21,8 +21,8 @@ do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+# load everything but the path and completion files and vim/undo files
+for file in ${${${config_files:#*/path.zsh}:#*/completion.zsh}:#vim/vim.symlink/undo/*.zsh}
 do
   source $file
 done
