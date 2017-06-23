@@ -28,6 +28,7 @@
   stsh= stash --keep-index
   staash= stash --include-untracked
   staaash= stash --all
+  clean-branches= !"git branch | grep -v master | xargs git branch -D"
 
 [color]
   ui = auto

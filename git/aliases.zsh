@@ -10,7 +10,6 @@ alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
            perl -pe 's/^[ \t]*//' | sed 's/ /\\\\ /g' | xargs git rm"
-alias gbrd="git branch | grep -v "master" | xargs git branch -D"
 
 alias gcm="git commit -m"
 alias gwip="git commit -m 'wip'"
