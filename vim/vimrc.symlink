@@ -159,7 +159,8 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Airline config
-let g:airline_extensions = [ 'ctrlp' ]
+let g:airline_powerline_fonts = 1
+let g:airline_extensions = [ 'ctrlp', 'tabline', 'branch' ]
 
 " Undo configs
 set undodir=~/.vim/undo
@@ -191,7 +192,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
-
 
 " Make Ctags
 command! MakeTags !ctags -R .

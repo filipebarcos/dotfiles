@@ -12,6 +12,9 @@ echo "Done linking files..."
 sh -c "$DOTFILES_ROOT/script/bootstrap"
 echo "Done bootstraping dotfiles..."
 
+sh -c "$DOTFILES_ROOT/script/install_fonts"
+echo "Done installing powerline patched fonts..."
+
 cd "$(dirname $)"/..
 
 # find the installers and run them iteratively
