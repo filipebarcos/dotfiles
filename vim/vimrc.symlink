@@ -160,7 +160,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Airline config
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = [ 'ctrlp', 'tabline', 'branch' ]
+let g:airline_extensions = [ 'ctrlp' ]
 
 " Undo configs
 set undodir=~/.vim/undo
