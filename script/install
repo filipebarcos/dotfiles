@@ -5,15 +5,26 @@
 set -e
 DOTFILES_ROOT="`pwd`"
 
+echo "Creating required folders..."
+[ -d ~/tmp ] || mkdir ~/tmp
+[ -d ~/workspace ] || mkdir ~/workspace
+echo "Done creating required folders!"
+
 echo "Linking files..."
 sh -c "$DOTFILES_ROOT/script/link"
-echo "Done linking files..."
+echo "Done linking files!"
 
+echo "Installing dependencies..."
+sh -c "$DOTFILES_ROOT/script/install_brew"
+echo "Done installing dependencies!"
+
+echo "Bootstraping dotfiles..."
 sh -c "$DOTFILES_ROOT/script/bootstrap"
-echo "Done bootstraping dotfiles..."
+echo "Done bootstraping dotfiles!"
 
+echo "Installing powerline patched fonts..."
 sh -c "$DOTFILES_ROOT/script/install_fonts"
-echo "Done installing powerline patched fonts..."
+echo "Done installing powerline patched fonts!"
 
 cd "$(dirname $)"/..
 

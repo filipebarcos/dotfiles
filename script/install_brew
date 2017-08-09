@@ -18,7 +18,13 @@ then
   brew tap caskroom/cask
 fi
 
+if test ! $(brew bundle --help)
+then
+  echo "Installing brew-bundle"
+  brew tap Homebrew/bundle
+fi
+
 # Install homebrew packages
 
-brew bundle exec -- bundle install
+brew bundle --file=$HOME/.dotfiles/homebrew/Brewfile
 exit 0
