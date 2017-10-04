@@ -1,3 +1,6 @@
+[includeIf "gitdir:~/src/github.com/Shopify*"]
+  path = .gitconfig-shopify
+
 [user]
   name = Filipe Costa
   email = filipebarcos@gmail.com
@@ -6,7 +9,7 @@
   helper = osxkeychain
 
 [web]
-	browser = open
+	browser = google-chrome
 
 [alias]
   co = checkout
