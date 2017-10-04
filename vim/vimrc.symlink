@@ -81,26 +81,16 @@ set foldmethod=indent
 set foldlevelstart=99
 set foldlevel=99
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$', '\.DS_Store$']
 let NERDTreeShowHidden = 1
 
-" CtrlP configs
-map <silent> <LocalLeader>ff :CtrlP<CR>
-map <silent> <LocalLeader>ft :CtrlPTag<CR>
-map <silent> <LocalLeader>fb :CtrlPBuffer<CR>
-map <silent> <LocalLeader>fr :CtrlPClearAllCache<CR>
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|node_modules|tmp|log|bower_components|vcr)$',
-  \ 'file': 'tags$\|\v\.(DS_Store|beam|zip|so|png|jpg|gif|svg)$',
-  \ }
-
-" ctrlp-cmatch still does not support
-" https://github.com/JazzCore/ctrlp-cmatcher/issues/35
-if !has('nvim')
-  let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
-endif
+" FZF configs
+map <silent> <LocalLeader>ff :FZF<CR>
+map <silent> <LocalLeader>fb :Bufffers<CR>
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>

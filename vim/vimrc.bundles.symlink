@@ -3,8 +3,8 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 Plugin 'rking/ag.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'

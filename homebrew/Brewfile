@@ -29,6 +29,7 @@ brew 'yarn'
 brew 'zsh'
 brew 'mas'
 brew 'neovim'
+brew 'fzf'
 
 cask '1password'
 cask 'appcleaner'
