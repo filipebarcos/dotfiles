@@ -90,7 +90,7 @@ let NERDTreeShowHidden = 1
 
 " FZF configs
 map <silent> <LocalLeader>ff :FZF<CR>
-map <silent> <LocalLeader>fb :Bufffers<CR>
+map <silent> <LocalLeader>fb :Buffers<CR>
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
@@ -149,8 +149,8 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Airline config
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_extensions = [ 'ctrlp' ]
 
 " Undo configs
 set undodir=~/.vim/undo
