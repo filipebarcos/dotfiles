@@ -32,6 +32,7 @@
   staash= stash --include-untracked
   staaash= stash --all
   clean-branches= !"git branch | grep -v master | xargs git branch -D"
+  pushf = push --force-with-lease
 
 [color]
   ui = auto
