@@ -13,14 +13,16 @@ alias grm="git status | grep deleted | awk '{\$1=\$2=\"\"; print \$0}' | \
 
 alias gcm="git commit -m"
 alias gwip="git commit -m 'wip'"
-alias gp="git rev-parse --abbrev-ref HEAD | git push -u origin $1"
-alias gforce="git push -f"
+alias gforce="git push --force"
+alias glease="git push --force-with-lease"
 alias whatlast="git show HEAD"
 alias ci="git commit"
 alias st="git status"
 alias master="git checkout master"
 alias back="git checkout -"
-alias grebase="git checkout master && git pull && git checkout - && git rebase master"
+alias grebase="git fetch origin master && git rebase origin/master"
+alias gpull="git pull origin $(git rev-parse --abbrev-ref HEAD)"
+alias gpush="git rev-parse --abbrev-ref HEAD | git push -u origin $1"
 
 # hub related aliases
 alias pr="hub pull-request"
