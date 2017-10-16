@@ -114,6 +114,7 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 nnoremap <silent> <LocalLeader>q :q<CR>
 cabbrev ag Rg
 cabbrev Ag Rg
+cabbrev rg Rg
 cabbrev W w
 cabbrev Q q
 
