@@ -92,6 +92,19 @@ let NERDTreeShowHidden = 1
 map <silent> <LocalLeader>ff :FZF<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
 
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" Find the string under the cursor accross files in project, using fzf and rg
+set grepprg=rg\ --vimgrep
+command! -bang -nargs=* RipGrepFind call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
 nnoremap <silent> <LocalLeader>[ :tabp<CR>
@@ -99,7 +112,8 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 
 " general mappings
 nnoremap <silent> <LocalLeader>q :q<CR>
-cabbrev ag Ag
+cabbrev ag Rg
+cabbrev Ag Rg
 cabbrev W w
 cabbrev Q q
 

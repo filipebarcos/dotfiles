@@ -2,7 +2,6 @@ call vundle#begin()
 
 Plugin 'gmarik/vundle'
 
-Plugin 'rking/ag.vim'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'wesgibbs/vim-irblack'
