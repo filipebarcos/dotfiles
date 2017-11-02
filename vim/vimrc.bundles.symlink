@@ -26,6 +26,9 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tmhedberg/matchit'
 Plugin 'vim-airline/vim-airline'
+Plugin 'HerringtonDarkholme/yats.vim'
+
+Plugin 'w0rp/ale'
 
 Plugin 'trevordmiller/nova-vim'
 Plugin 'morhetz/gruvbox'
