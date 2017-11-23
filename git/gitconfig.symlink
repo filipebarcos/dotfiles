@@ -27,12 +27,13 @@
   # the acronym stands for "subtree add"
   sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
   # the acronym stands for "subtree update"
-  sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f" }" }"
+  sbu = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
   stsh= stash --keep-index
   staash= stash --include-untracked
   staaash= stash --all
   clean-branches= !"git branch | grep -v master | xargs git branch -D"
   pushf = push --force-with-lease
+  pam = !$ZSH/bin/git-pam
 
 [color]
   ui = auto

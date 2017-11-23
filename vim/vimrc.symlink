@@ -92,6 +92,15 @@ let NERDTreeShowHidden = 1
 map <silent> <LocalLeader>ff :FZF<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
 
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
 " [Tags] Command to generate tags file
 let g:fzf_tags_command = 'ctags -R'
 
@@ -104,6 +113,10 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+"endof FZF configs
+
+nnoremap <silent> <LocalLeader>g :Rg <C-r><C-w><cr>
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>

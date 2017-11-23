@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Pipes recent branch into FZF, after chosen check them out
+
+branch=$(git branch | fzf)
+git checkout $branch
