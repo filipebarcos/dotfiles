@@ -34,6 +34,7 @@
   clean-branches= !"git branch | grep -v master | xargs git branch -D"
   pushf = push --force-with-lease
   pam = !$ZSH/bin/git-pam
+  pom = pull origin master
 
 [color]
   ui = auto
