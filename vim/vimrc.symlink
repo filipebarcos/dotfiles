@@ -105,18 +105,22 @@ let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R'
 
 " Find the string under the cursor accross files in project, using fzf and rg
-set grepprg=rg\ --vimgrep
-command! -bang -nargs=* RipGrepFind call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+if executable("rg")
+  set grepprg=rg\ --vimgrep\ --no-heading
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
+  command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
+    \   <bang>0 ? fzf#vim#with_preview('up:60%')
+    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+    \   <bang>0)
 
-"endof FZF configs
-
-nnoremap <silent> <LocalLeader>g :Rg <C-r><C-w><cr>
+  nnoremap <silent> <LocalLeader>g :Rg <C-r><C-w><cr>
+  cabbrev ag Rg
+  cabbrev Ag Rg
+  cabbrev rg Rg
+endif
+"endof FZF +rg configs
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
@@ -125,9 +129,6 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 
 " general mappings
 nnoremap <silent> <LocalLeader>q :q<CR>
-cabbrev ag Rg
-cabbrev Ag Rg
-cabbrev rg Rg
 cabbrev W w
 cabbrev Q q
 
