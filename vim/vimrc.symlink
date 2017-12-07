@@ -37,7 +37,7 @@ if has('nvim')
   let g:gruvbox_contrast_dark='soft'
   let g:gruvbox_bold=0
 else
-  colorschem dracula
+  colorscheme dracula
 endif
 
 " Disable swap files
