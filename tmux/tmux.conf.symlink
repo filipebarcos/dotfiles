@@ -43,8 +43,8 @@ setw -g pane-base-index 1
 set -g renumber-windows on
 
 # Highlight active window
-set-window-option -g window-status-current-bg '#0DAF58'
-set-window-option -g window-status-current-fg '#EEEEEE'
+set-window-option -g window-status-current-bg '#AFDF00'
+set-window-option -g window-status-current-fg '#005F00'
 
 # Line colors
 set -g pane-active-border-fg '#A20B14'
@@ -75,5 +75,5 @@ set -g status-justify left
 set -gq status-utf8 on
 
 set -g status-left-length 40
-set -g status-left '#[fg=#0DAF58]#S#[default] #I:#P'
-set -g status-right "#[fg=#0DAF58]#h#[default]: #(date +'%a, %b %d  %R')"
+set -g status-left '#[fg=#AFDF00]#S#[default] #I:#P'
+set -g status-right "#[fg=#AFDF00]#h#[default]: #(date +'%a, %b %d  %R')"
