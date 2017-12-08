@@ -65,6 +65,7 @@ set wrap                       " Turn on line wrapping
 set cursorline
 set ttyfast                    " Blazing fast scroll
 set lazyredraw                 " to avoid scrolling problems
+set noshowmode                 " Lightline already shows the mode, no need to show again
 
 set ignorecase                 " Case-insensitive searching
 set smartcase                  " Case-sensitive IF contains a capital letter
