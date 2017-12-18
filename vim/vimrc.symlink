@@ -132,8 +132,6 @@ nnoremap <silent> <LocalLeader>] :tabn<CR>
 nnoremap <silent> <LocalLeader>q :q<CR>
 cabbrev W w
 cabbrev Q q
-nnoremap n nzz
-nnoremap N Nzz
 
 " Vim-test configs
 let test#strategy = "vimux" " Uses tmux window to run the tests
