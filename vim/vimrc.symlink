@@ -211,3 +211,5 @@ autocmd FileType javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
 command! MakeTags !ctags -R .
 " Delete specific line number
 command! -range -nargs=0 Delete <line1>,<line2>d|norm ``
+" Split single line in multiple after comma ,
+comman! NewLineAfterComma %s/,/,\r/g
