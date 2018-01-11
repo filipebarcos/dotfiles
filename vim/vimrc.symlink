@@ -119,7 +119,6 @@ if executable("rg")
   nnoremap <silent> <LocalLeader>g :Rg <C-r><C-w><cr>
   cabbrev ag Rg
   cabbrev Ag Rg
-  cabbrev rg Rg
 endif
 "endof FZF +rg configs
 
@@ -134,8 +133,12 @@ cabbrev W w
 cabbrev Q q
 
 " Vim-test configs
-let test#strategy = "vimux" " Uses tmux window to run the tests
-                            " https://github.com/janko-m/vim-test#strategies
+" https://github.com/janko-m/vim-test#strategies
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'basic',
+  \ 'suite':   'basic' }
+
 " Vim-test mappings
 map <silent> <LocalLeader>l :TestLast<CR>
 map <silent> <LocalLeader>t :TestFile<CR>
