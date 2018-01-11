@@ -105,22 +105,12 @@ let g:fzf_buffers_jump = 1
 " [Tags] Command to generate tags file
 let g:fzf_tags_command = 'ctags -R'
 
-" Find the string under the cursor accross files in project, using fzf and rg
 if executable("rg")
-  set grepprg=rg\ --vimgrep\ --no-heading
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-  command! -bang -nargs=* Rg
-    \ call fzf#vim#grep(
-    \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
-    \   <bang>0 ? fzf#vim#with_preview('up:60%')
-    \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-    \   <bang>0)
-
-  nnoremap <silent> <LocalLeader>g :Rg <C-r><C-w><cr>
-  cabbrev ag Rg
-  cabbrev Ag Rg
+  let g:ackprg = 'rg -S --no-heading --vimgrep'
+  nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
+  cabbrev ack Ack
+  cabbrev ack! Ack!
 endif
-"endof FZF +rg configs
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>

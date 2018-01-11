@@ -4,6 +4,7 @@ Plugin 'gmarik/vundle'
 
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'wesgibbs/vim-irblack'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-commentary'
