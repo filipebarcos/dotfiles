@@ -26,6 +26,7 @@ Plugin 'taglist.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'itchyny/lightline.vim'
+Plugin 'fatih/vim-go'
 
 Plugin 'morhetz/gruvbox'
 Plugin 'dracula/vim'

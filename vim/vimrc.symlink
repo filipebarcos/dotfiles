@@ -187,6 +187,9 @@ let g:jsx_ext_required = 0
 " Setup syntax highlight for flowtype
 let g:javascript_plugin_flow = 1
 
+" Color highlight go types
+let g:go_highlight_types = 1
+
 " FUNCTIONS
 
 function! <SID>StripTrailingWhitespaces()
