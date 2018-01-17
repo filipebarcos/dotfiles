@@ -105,6 +105,11 @@ let g:fzf_buffers_jump = 1
 " [Tags] Command to generate tags file
 let g:fzf_tags_command = 'ctags -R'
 
+let g:lightline = {
+  \ 'component_function': {
+  \   'filename': 'FilenameForLightline'
+  \ }}
+
 if executable("rg")
   let g:ackprg = 'rg -S --no-heading --vimgrep'
   nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
@@ -184,6 +189,11 @@ let g:javascript_plugin_flow = 1
 let g:go_highlight_types = 1
 
 " FUNCTIONS
+
+" Show full path of filename
+function! FilenameForLightline()
+    return expand('%')
+endfunction
 
 function! <SID>StripTrailingWhitespaces()
   " Preparation: save last search, and cursor position.
