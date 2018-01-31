@@ -113,8 +113,8 @@ let g:lightline = {
 if executable("rg")
   let g:ackprg = 'rg -S --no-heading --vimgrep'
   nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
-  cabbrev ack Ack
-  cabbrev ack! Ack!
+  cabbrev ack Ack!
+  cabbrev Ack Ack!
 endif
 
 " Tab mappings
