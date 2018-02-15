@@ -49,7 +49,6 @@
   pretty = format:'%C(red)%h%Creset: %C(cyan)%an%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset'
 
 [core]
-  excludesfile = /opt/boxen/config/git/gitignore
   editor = nvim
 
 [apply]
