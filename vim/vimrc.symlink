@@ -2,11 +2,6 @@
 let g:CSApprox_verbose_level = 0
 
 set nocompatible               " be iMproved (required)
-if has('nvim')
-  scriptencoding utf-8
-  set encoding=utf-8
-endif
-
 filetype off                   " (required)
 
 " Vundle Config
@@ -23,21 +18,20 @@ endif
 
 " Wrap gitcommit file types at the appropriate length
 filetype plugin indent on " (required)
-compiler ruby
 
 "I look good!
 syntax on
 set t_Co=256 " For 256 colors
 
 if has('nvim')
+  scriptencoding utf-8
+  set encoding=utf-8
   set termguicolors
   let $nvim_tui_enable_true_color=1
   colorscheme gruvbox
   " " Gruvbox specific settings
   let g:gruvbox_contrast_dark='hard'
   let g:gruvbox_vert_split='fg4'
-else
-  colorscheme dracula
 endif
 
 " Disable swap files
