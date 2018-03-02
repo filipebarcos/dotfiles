@@ -28,6 +28,8 @@ Plugin 'Townk/vim-autoclose'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'itchyny/lightline.vim'
 Plugin 'fatih/vim-go'
+Plugin 'sbdchd/neoformat'
+Plugin 'w0rp/ale'
 
 Plugin 'morhetz/gruvbox'
 Plugin 'dracula/vim'

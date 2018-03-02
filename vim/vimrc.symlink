@@ -106,10 +106,13 @@ let g:lightline = {
 
 if executable("rg")
   let g:ackprg = 'rg -S --no-heading --vimgrep'
-  nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
-  cabbrev ack Ack!
-  cabbrev Ack Ack!
 endif
+
+" Remaining Ack.vim settings
+nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
+cabbrev ack Ack!
+cabbrev Ack Ack!
+nnoremap <C-/> :Ack!<space>
 
 " Tab mappings
 nnoremap <silent> <LocalLeader><CR> :tabe<CR>
@@ -137,6 +140,7 @@ map <silent> <LocalLeader>r :TestNearest<CR>
 set clipboard=unnamed
 vnoremap <C-c> "*y
 vmap \\ :Commentary<CR>
+nmap \\ :Commentary<CR>
 
 " Vimux
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
@@ -213,3 +217,42 @@ command! MakeTags !ctags -R .
 command! -range -nargs=0 Delete <line1>,<line2>d|norm ``
 " Split single line in multiple after comma ,
 command! NewLineAfterComma %s/,/,\r/g
+
+" ALE configuration
+let g:ale_completion_enabled = 0
+let g:ale_javascript_eslint_executable = "eslint"
+let g:ale_javascript_eslint_options = ""
+let g:ale_javascript_eslint_use_global = 0
+let g:ale_javascript_prettier_executable = "prettier"
+let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --no-bracket-spacing"
+let g:ale_javascript_prettier_use_global = 1
+let g:ale_sign_column_always = 0
+let g:ale_fixers = {
+      \   'go': [
+      \     'gofmt',
+      \   ],
+      \   'ruby': [
+      \     'prettier',
+      \   ],
+      \   'typescript': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \     'Tslint',
+      \   ],
+      \   'javascript': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \     'Eslint',
+      \   ],
+      \   'scss': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \   ],
+      \   'css': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \   ],
+      \   'vim': [
+      \     'remove_trailing_lines',
+      \   ],
+\ }
