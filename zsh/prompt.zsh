@@ -21,9 +21,9 @@ git_dirty() {
   else
     if [[ "$st" =~ ^nothing ]]
     then
-      echo "[%{$fg[green]%}$(git_prompt_info)%{$reset_color%}]"
+      echo " at %{$fg[green]%}($(git_prompt_info))%{$reset_color%}"
     else
-      echo "[%{$fg[red]%}$(git_prompt_info)%{$reset_color%}]"
+      echo " at %{$fg[red]%}($(git_prompt_info))%{$reset_color%}"
     fi
   fi
 }
@@ -41,25 +41,9 @@ unpushed () {
 need_push () {
   if [[ $(unpushed) == "" ]]
   then
-    echo " "
-  else
-    echo ": %{$fg_bold[magenta]%}unpushed%{$reset_color%} "
-  fi
-}
-
-ruby_version() {
-  if (( $+commands[rbenv] )) && [[ -f .ruby-version ]]
-  then
-    echo "$(rbenv version | awk '{print $1}')"
-  fi
-}
-
-rb_prompt() {
-  if ! [[ -z "$(ruby_version)" ]]
-  then
-    echo "%{$fg_bold[white]%}(%{$reset_color%}%{$fg_bold[red]%}$(ruby_version)%{$reset_color%}%{$fg_bold[white]%})%{$reset_color%}"
-  else
     echo ""
+  else
+    echo ": %{$fg_bold[magenta]%}unpushed%{$reset_color%}"
   fi
 }
 
@@ -67,12 +51,12 @@ directory_name() {
   echo "%{$fg[blue]%}%c%{$reset_color%}"
 }
 
-export PROMPT=$'$(directory_name)$(git_dirty)$(need_push)\|\> '
-set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}$(rb_prompt)%{$reset_color%}"
+shell_symbol() {
+  echo " %{$fg_bold[cyan]%}\$%{$reset_color%} "
 }
 
-precmd() {
-  title "zsh" "%m" "%55<...<%~"
-  set_prompt
+me() {
+  echo " me"
 }
+
+export PROMPT=$'$(me) in $(directory_name)$(git_dirty)$(need_push)$(shell_symbol)'

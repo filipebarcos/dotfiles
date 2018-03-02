@@ -1,4 +1,4 @@
 #!/bin/sh
 #
 
-open $(find * -type f | selecta)
+open $(find * -type f | fzf)
