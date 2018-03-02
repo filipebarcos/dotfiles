@@ -1,6 +1,9 @@
 # Set prefix command to Contro-\
 unbind C-b
 set-option -g prefix 'C-\'
+# Set UTF 8
+set -g utf8
+set-window-option -g utf8 on
 
 # C-\ C-\ jumps to the last open window
 bind-key C-\ last-window
