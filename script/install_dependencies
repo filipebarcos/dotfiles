@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Dependencies not tied to homebrew
+#
+# This installs some of the common dependencies needed (or at least desired)
+# using Homebrew.
+
+# Check for Rustup.rs
+if test ! $(which rustup)
+then
+  echo "  Installing Rustup.rs."
+  curl https://sh.rustup.rs -sSf | sh
+fi
+
+exit 0
