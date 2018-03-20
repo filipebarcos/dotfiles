@@ -56,7 +56,7 @@ font:
     style: Retina
 
   # Point size of the font
-  size: 18.0
+  size: 19.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -218,10 +218,10 @@ live_config_reload: true
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
-# shell:
-#   program: /bin/bash
-#   args:
-#     - --login
+shell:
+  program: /usr/local/bin/zsh
+  args:
+    - --login
 
 # Key bindings
 #
