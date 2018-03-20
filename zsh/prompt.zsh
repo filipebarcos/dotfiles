@@ -56,7 +56,7 @@ shell_symbol() {
 }
 
 me() {
-  echo " 👨🏻‍💻 "
+  echo " 🏈"
 }
 
 export PROMPT=$'$(me) in $(directory_name)$(git_dirty)$(need_push)$(shell_symbol)'
