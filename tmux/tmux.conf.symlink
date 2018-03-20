@@ -69,8 +69,7 @@ set-window-option -g window-status-current-bg '#000000'
 
 set -g status-bg '#AFDF00'
 set -g status-fg '#000000'
-# center the status bar
-set -g status-justify centre
+set -g status-justify left
 # set utf-8
 set -gq status-utf8 on
 
