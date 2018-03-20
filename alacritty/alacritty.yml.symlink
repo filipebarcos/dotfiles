@@ -56,7 +56,7 @@ font:
     style: Retina
 
   # Point size of the font
-  size: 19.0
+  size: 20.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -81,7 +81,7 @@ render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
+custom_cursor_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -93,7 +93,7 @@ colors:
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0x000000'
-    cursor: '0xffffff'
+    cursor: '0xff6600'
 
   # Normal colors
   normal:
