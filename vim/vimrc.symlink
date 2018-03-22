@@ -80,6 +80,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " other NERDTree configs
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$', '\.DS_Store$']
 let NERDTreeShowHidden = 1
 
