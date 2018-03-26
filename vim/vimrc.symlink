@@ -88,12 +88,6 @@ let NERDTreeShowHidden = 1
 map <silent> <LocalLeader>ff :FZF<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
 
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
@@ -113,6 +107,7 @@ endif
 nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
 cabbrev ack Ack!
 cabbrev Ack Ack!
+cabbrev rg Ack!
 nnoremap <C-/> :Ack!<space>
 
 " Tab mappings
@@ -146,7 +141,7 @@ nmap \\ :Commentary<CR>
 " Vimux
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
 
-" a fill more shortcuts
+" a few more shortcuts
 nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><Space> :noh<CR>
@@ -154,12 +149,6 @@ nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
 
 " use ; as :
 noremap ; :
-
-" I have to be forced to use hjkl
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
 
 " helping with window navigation
 map <C-h> <C-w>h
