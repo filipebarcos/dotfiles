@@ -132,9 +132,8 @@ map <silent> <LocalLeader>l :TestLast<CR>
 map <silent> <LocalLeader>t :TestFile<CR>
 map <silent> <LocalLeader>r :TestNearest<CR>
 
-" Copy to system clipboard (ctrl+c on visual mode)
+" Copy to system clipboard
 set clipboard=unnamed
-vnoremap <C-c> "*y
 vmap \\ :Commentary<CR>
 nmap \\ :Commentary<CR>
 
