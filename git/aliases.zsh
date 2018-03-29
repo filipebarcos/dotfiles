@@ -22,6 +22,7 @@ alias master="git checkout master"
 alias back="git checkout -"
 alias grebase="git fetch origin master && git rebase origin/master"
 alias gpush="git rev-parse --abbrev-ref HEAD | git push origin $1"
+alias gitpushf="git pushf"
 
 # hub related aliases
 alias pr="hub pull-request"
