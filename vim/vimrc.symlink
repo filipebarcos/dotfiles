@@ -123,9 +123,9 @@ cabbrev Q q
 " Vim-test configs
 " https://github.com/janko-m/vim-test#strategies
 let test#strategy = {
-  \ 'nearest': 'neovim',
-  \ 'file':    'basic',
-  \ 'suite':   'basic' }
+  \ 'nearest': 'vimux',
+  \ 'file':    'vimux',
+  \ 'suite':   'vimux' }
 
 " Vim-test mappings
 map <silent> <LocalLeader>l :TestLast<CR>
