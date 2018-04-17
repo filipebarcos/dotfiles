@@ -35,6 +35,7 @@
   pushf = push --force-with-lease
   pam = !$ZSH/bin/git-pam
   pom = pull origin master
+  goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
 
 [color]
   ui = auto
