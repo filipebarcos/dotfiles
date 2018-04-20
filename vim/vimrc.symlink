@@ -221,7 +221,7 @@ let g:ale_fixers = {
       \     'gofmt',
       \   ],
       \   'ruby': [
-      \     'prettier',
+      \     'rubocop', 'prettier',
       \   ],
       \   'typescript': [
       \     'remove_trailing_lines',
