@@ -90,6 +90,10 @@ let NERDTreeShowHidden = 1
 map <silent> <LocalLeader>ff :FZF<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
 
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
@@ -97,8 +101,14 @@ let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R'
 
 let g:lightline = {
+  \ 'colorscheme': 'powerline',
+  \ 'active': {
+  \   'right': [ [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'filetype', 'fileencoding' ] ]
+  \ },
   \ 'component_function': {
-  \   'filename': 'FilenameForLightline'
+  \   'filename': 'FilenameForLightline',
   \ }}
 
 if executable("rg")
@@ -181,7 +191,7 @@ let g:go_highlight_types = 1
 
 " Show full path of filename
 function! FilenameForLightline()
-    return expand('%')
+  return expand('%')
 endfunction
 
 function! <SID>StripTrailingWhitespaces()
