@@ -51,9 +51,9 @@ font:
 
   # The italic font face
   italic:
-    family: Fira Code
+    family: Menlo
     # Style can be specified to pick a specific face.
-    style: Retina
+    style: Italic
 
   # Point size of the font
   size: 20.0
