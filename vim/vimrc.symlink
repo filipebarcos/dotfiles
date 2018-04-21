@@ -30,6 +30,7 @@ if has('nvim')
   let $nvim_tui_enable_true_color=1
   colorscheme gruvbox
   " " Gruvbox specific settings
+  let g:gruvbox_italic=1
   let g:gruvbox_contrast_dark='hard'
   let g:gruvbox_vert_split='fg4'
 endif
@@ -46,7 +47,8 @@ set hlsearch                   " Highlight matches
 set hidden                     " Handle multiple buffers better
 set incsearch                  " Highlight matches as you type
 set laststatus=2               " Show the status line all the time
-set nowritebackup              " Same as above
+set colorcolumn=120            " Use mark for 120 chars length
+set nowritebackup
 set number                     " Set line numbers
 set scrolloff=3                " Show 3 lines of context around the cursor
 set showcmd                    " Display incomplete commands
