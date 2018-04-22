@@ -17,7 +17,8 @@ if filereadable(expand("~/.vimrc.snippets"))
 endif
 
 " Wrap gitcommit file types at the appropriate length
-filetype plugin indent on " (required)
+filetype indent on " (required)
+filetype plugin on " (required)
 
 "I look good!
 syntax on
