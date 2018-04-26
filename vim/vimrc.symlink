@@ -158,6 +158,8 @@ nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
 nnoremap <silent> <LocalLeader><Space> :noh<CR>
 nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
+" Use . in selected visual mode,like in normal mode
+vnoremap . :norm.<CR>
 
 " use ; as :
 noremap ; :
