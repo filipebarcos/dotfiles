@@ -1,3 +1,0 @@
-#!/bin/sh
-
-tmux -u new-session -s $1
