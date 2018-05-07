@@ -1,5 +1,5 @@
 tat() {
-  eval "$(tmux attach $1)"
+  eval "$(tmux attach-session -t $1)"
 }
 
 tnew() {
