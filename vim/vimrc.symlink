@@ -29,11 +29,13 @@ if has('nvim')
   set encoding=utf-8
   set termguicolors
   let $nvim_tui_enable_true_color=1
-  colorscheme gruvbox
+  " colorscheme one
+  let g:one_allow_italics = 1 " I love italic for comments
+  colorscheme one
   " " Gruvbox specific settings
-  let g:gruvbox_italic=1
-  let g:gruvbox_contrast_dark='hard'
-  let g:gruvbox_vert_split='fg4'
+  " let g:gruvbox_italic=1
+  " let g:gruvbox_contrast_dark='hard'
+  " let g:gruvbox_vert_split='fg4'
 endif
 
 " Disable swap files
@@ -102,7 +104,7 @@ let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R'
 
 let g:lightline = {
-  \ 'colorscheme': 'powerline',
+  \ 'colorscheme': 'one',
   \ 'active': {
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],

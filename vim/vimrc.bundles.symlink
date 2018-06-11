@@ -27,5 +27,6 @@ Plugin 'fatih/vim-go'
 Plugin 'sbdchd/neoformat'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
+Plugin 'rakr/vim-one'
 
 call vundle#end()
