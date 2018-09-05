@@ -1,0 +1,29 @@
+" Tab mappings
+nnoremap <silent> <LocalLeader><CR> :tabe<CR>
+nnoremap <silent> <LocalLeader>[ :tabp<CR>
+nnoremap <silent> <LocalLeader>] :tabn<CR>
+
+" general mappings
+nnoremap <silent> <LocalLeader>q :q<CR>
+cabbrev W w
+cabbrev Q q
+cabbrev Wq wq
+cabbrev WQ wq
+
+" a few more shortcuts
+nnoremap <silent> <LocalLeader>ee :tabe $MYVIMRC<CR>
+nnoremap <silent> <LocalLeader>ss :source $MYVIMRC<CR>
+nnoremap <silent> <LocalLeader><Space> :noh<CR>
+nnoremap <silent> <LocalLeader>ww :%s/\s\+$//<CR>:let @/=''<CR><C-o>
+" Use . in selected visual mode,like in normal mode
+vnoremap . :norm.<CR>
+
+" use ; as :
+noremap ; :
+
+" helping with window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+

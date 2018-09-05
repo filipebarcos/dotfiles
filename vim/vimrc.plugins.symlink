@@ -1,0 +1,121 @@
+" Colorscheme
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
+
+" NERDTree #########################################################################
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$', '\.DS_Store$']
+let NERDTreeShowHidden = 1
+
+" FZF ##############################################################################
+map <silent> <LocalLeader>ff :FZF<CR>
+map <silent> <LocalLeader>fb :Buffers<CR>
+
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+let g:fzf_buffers_jump = 1 " [Buffers] Jump to the existing window if possible
+let g:fzf_tags_command = 'ctags -R' " [Tags] Command to generate tags file
+
+" Lightline #########################################################################
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ 'active': {
+  \   'right': [ [ 'lineinfo' ],
+  \              [ 'percent' ],
+  \              [ 'filetype', 'fileencoding' ] ]
+  \ },
+  \ 'component_function': {
+  \   'filename': 'FilenameForLightline',
+  \ }}
+
+" Show full path of filename
+function! FilenameForLightline()
+  return expand('%')
+endfunction
+
+" Ack.vim ##########################################################################
+if executable("rg")
+  let g:ackprg = 'rg -S --no-heading --vimgrep'
+endif
+
+nnoremap <silent> <LocalLeader>g :Ack! <C-r><C-w><cr>
+cabbrev ack Ack!
+cabbrev Ack Ack!
+cabbrev rg Ack!
+
+" Vim-test #########################################################################
+let test#strategy = {
+  \ 'nearest': 'vimux',
+  \ 'file':    'vimux',
+  \ 'suite':   'vimux' }
+
+map <silent> <LocalLeader>l :TestLast<CR>
+map <silent> <LocalLeader>t :TestFile<CR>
+map <silent> <LocalLeader>r :TestNearest<CR>
+
+" Vim Commentary ###################################################################
+vmap \\ :Commentary<CR>
+nmap \\ :Commentary<CR>
+
+" Vimux ############################################################################
+map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
+
+" ALE ######################################################################
+let g:ale_completion_enabled = 0
+let g:ale_javascript_eslint_executable = "eslint"
+let g:ale_javascript_eslint_options = ""
+let g:ale_javascript_eslint_use_global = 0
+let g:ale_javascript_prettier_executable = "prettier"
+let g:ale_javascript_prettier_options = "--single-quote --trailing-comma es5 --no-bracket-spacing"
+let g:ale_javascript_prettier_use_global = 1
+let g:ale_sign_column_always = 0
+let g:ale_fix_on_save = 0
+let g:ale_fixers = {
+      \   'go': [
+      \     'gofmt',
+      \   ],
+      \   'ruby': [
+      \     'remove_trailing_lines',
+      \     'rubocop',
+      \     'rufo',
+      \   ],
+      \   'typescript': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \     'Tslint',
+      \   ],
+      \   'javascript': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \     'eslint',
+      \   ],
+      \   'scss': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \   ],
+      \   'css': [
+      \     'remove_trailing_lines',
+      \     'prettier',
+      \   ],
+      \   'vim': [
+      \     'remove_trailing_lines',
+      \   ],
+\ }
+
+" PLEASE ORGANIZE ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+" Setup vim-jsx plugin to allow jsx syntax on .js files
+let g:jsx_ext_required = 0
+" Setup syntax highlight for flowtype
+let g:javascript_plugin_flow = 1
+
+" Color highlight go types
+let g:go_highlight_types = 1
+
+" Disable Autocomment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript.jsx setlocal omnifunc=javascriptcomplete#CompleteJS
