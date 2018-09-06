@@ -1,6 +1,5 @@
 " Colorscheme
-let g:one_allow_italics = 1 " I love italic for comments
-colorscheme one
+colorscheme dracula
 
 " NERDTree #########################################################################
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
@@ -21,7 +20,7 @@ let g:fzf_tags_command = 'ctags -R' " [Tags] Command to generate tags file
 
 " Lightline #########################################################################
 let g:lightline = {
-  \ 'colorscheme': 'one',
+  \ 'colorscheme': 'darcula',
   \ 'active': {
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
