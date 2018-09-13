@@ -47,9 +47,9 @@ cabbrev rg Ack!
 
 " Vim-test #########################################################################
 let test#strategy = {
-  \ 'nearest': 'vimux',
-  \ 'file':    'vimux',
-  \ 'suite':   'vimux' }
+  \ 'nearest': 'neovim',
+  \ 'file':    'neovim',
+  \ 'suite':   'neovim' }
 
 map <silent> <LocalLeader>l :TestLast<CR>
 map <silent> <LocalLeader>t :TestFile<CR>
