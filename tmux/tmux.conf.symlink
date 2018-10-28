@@ -11,7 +11,7 @@ bind-key | split-window -h -c "#{pane_current_path}"
 bind-key - split-window -v -c "#{pane_current_path}"
 
 # Default terminal is 256 colors
-set -g default-terminal "screen-256color"
+set -g default-terminal "xterm-256color"
 # Add truecolor support
 set -ga terminal-overrides ",xterm-256color:Tc"
 

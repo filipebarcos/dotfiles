@@ -12,4 +12,6 @@ then
   curl https://sh.rustup.rs -sSf | sh
 fi
 
+[ -e ~/.tmux/fixtures/xterm-256color.terminfo ] && tic ~/.tmux/fixtures/xterm-256color.terminfo
+
 exit 0
