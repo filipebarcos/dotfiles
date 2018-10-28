@@ -10,7 +10,8 @@ bind-key c new-window -c "#{pane_current_path}"
 bind-key | split-window -h -c "#{pane_current_path}"
 bind-key - split-window -v -c "#{pane_current_path}"
 
-# Default terminal is 256 colors
+# Default terminal is 256 colors this should have italics support
+# https://www.reddit.com/r/vim/comments/24g8r8/italics_in_terminal_vim_and_tmux/
 set -g default-terminal "xterm-256color"
 # Add truecolor support
 set -ga terminal-overrides ",xterm-256color:Tc"
