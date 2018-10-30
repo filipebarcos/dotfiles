@@ -250,6 +250,18 @@ key_bindings:
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
   - { key: End,                     chars: "\x1b[F",   mode: ~AppCursor  }
+  - { key: Key1,     mods: Command, chars: "\x1c\x31"                    }
+  - { key: Key2,     mods: Command, chars: "\x1c\x32"                    }
+  - { key: Key3,     mods: Command, chars: "\x1c\x33"                    }
+  - { key: Key4,     mods: Command, chars: "\x1c\x34"                    }
+  - { key: Key5,     mods: Command, chars: "\x1c\x35"                    }
+  - { key: Key6,     mods: Command, chars: "\x1c\x36"                    }
+  - { key: Key7,     mods: Command, chars: "\x1c\x37"                    }
+  - { key: Key8,     mods: Command, chars: "\x1c\x38"                    }
+  - { key: Key9,     mods: Command, chars: "\x1c\x39"                    }
+  - { key: T,        mods: Command, chars: "\x1c\x63"                    }
+  - { key: RBracket, mods: Command|Shift, chars: "\x1c\x6e"              }
+  - { key: LBracket, mods: Command|Shift, chars: "\x1c\x70"              }
   - { key: Key0,     mods: Command, action: ResetFontSize                }
   - { key: Equals,   mods: Command, action: IncreaseFontSize             }
   - { key: Minus,    mods: Command, action: DecreaseFontSize             }
