@@ -75,3 +75,5 @@
 	required = true
 [diff]
 	algorithm = patience
+[protocol]
+	version = 2
