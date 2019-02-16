@@ -20,6 +20,6 @@ source ~/.vimrc.bundles  " Install plugins (bundles) through Vundle
 source ~/.vimrc.plugins  " All plugins configs
 source ~/.vimrc.mappings " Global vim mappings
 source ~/.vimrc.snippets " A few snippets
-if filereadable("~/.vimrc.local")
+if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local  " Some private stuff
 endif
