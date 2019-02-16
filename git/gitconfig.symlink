@@ -1,6 +1,3 @@
-[includeIf "gitdir:~/src/github.com/Shopify*"]
-  path = .gitconfig-shopify
-
 [user]
   name = Filipe Costa
   email = filipebarcos@gmail.com
@@ -75,5 +72,5 @@
 	required = true
 [diff]
 	algorithm = patience
-[protocol]
-	version = 2
+[includeIf "gitdir:~/src/github.com/Shopify*"]
+  path = .gitconfig-shopify
