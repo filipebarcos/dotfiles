@@ -1,8 +1,7 @@
-sublime2/User/Package\ Control.sublime-settings
-sublime2/User/Package Control.last-run
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/bundle/*
 vim/vim.symlink/undo/*
+vim/vimrc.local*
 neovim/config.symlink/*
 !neovim/config.symlink/nvim/*
 terminfo/terminfo.symlink/*
