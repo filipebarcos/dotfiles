@@ -1,0 +1,28 @@
+{
+  "editor.fontSize": 19,
+  "editor.fontFamily": "Hasklig",
+  "workbench.colorTheme": "Default Light+",
+  "editor.wordWrap": "on",
+  "files.exclude": {
+      "**/*.rbi": true
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.folding": false,
+  "editor.renderIndentGuides": false,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.settings.editor": "json",
+  "search.exclude": {
+      "**/log": true,
+      "**/rbi": true,
+  },
+  "terminal.external.osxExec": "Alacritty.app",
+}
