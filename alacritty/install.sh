@@ -1,11 +1,16 @@
 #!/bin/sh
 
+# IF there are issues with Alacritty closing once we try to
+# open it like `./target/release/alacritty -vvv --print-events`
+
 set -e
 
 if test ! $(which cargo)
 then
-  echo "  💽 Installing Rust+Cargo"
-  brew install rust
+  echo "  💽 Installing Rustup"
+  curl https://sh.rustup.rs -sSf | sh
+  rustup override set stable
+  rustup update stable
 fi
 
 echo "  ✅ Cargo"
@@ -16,7 +21,6 @@ then
   git clone https://github.com/jwilm/alacritty.git $HOME/src/github.com/alacritty
   cd $HOME/src/github.com/alacritty
   echo "  🔨 Building"
-  cargo build --release
   make app
   cp -r target/release/osx/Alacritty.app /Applications/Alacritty.app
 fi
