@@ -13,7 +13,7 @@ syntax enable
 set t_Co=256 " For 256 colors
 
 " Vundle Config
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 
 source ~/.vimrc.base     " Base config, setting global neovim vars
 source ~/.vimrc.bundles  " Install plugins (bundles) through Vundle
