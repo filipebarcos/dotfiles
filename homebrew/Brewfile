@@ -41,7 +41,9 @@ cask 'spotify'
 cask 'telegram'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
+cask 'alfred'
 
 mas 'pixelmator', id: 407963104
 mas 'twitter', id: 409789998
 mas 'amphetamine', id: 937984704
+mass 'tweetbot', id: 
