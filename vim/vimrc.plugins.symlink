@@ -1,6 +1,5 @@
 " Colorscheme
-let ayucolor = 'dark'
-colorscheme ayu
+colorscheme dracula
 
 " NERDTree #########################################################################
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
@@ -21,7 +20,7 @@ let g:fzf_tags_command = 'ctags -R' " [Tags] Command to generate tags file
 
 " Lightline #########################################################################
 let g:lightline = {
-  \ 'colorscheme': 'powerline',
+  \ 'colorscheme': 'one',
   \ 'active': {
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],

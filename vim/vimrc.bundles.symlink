@@ -28,8 +28,6 @@ Plugin 'fatih/vim-go'
 Plugin 'sbdchd/neoformat'
 Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
-Plugin 'rakr/vim-one'
 Plugin 'dracula/vim'
-Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()
