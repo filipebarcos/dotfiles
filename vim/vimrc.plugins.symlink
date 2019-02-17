@@ -86,6 +86,9 @@ let g:ale_enabled = 1
 
 nmap <F8> :ALEFix<CR>
 
+" vim-elixir
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+
 " PLEASE ORGANIZE ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 " Disable Autocomment
