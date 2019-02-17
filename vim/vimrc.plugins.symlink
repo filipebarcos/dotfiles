@@ -64,7 +64,7 @@ map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
 
 " ALE ######################################################################
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   '*': ['remove_trailing_lines'],
 \   'go': ['gofmt'],
 \   'ruby': ['rubocop'],
 \   'javascript': ['eslint', 'prettier'],
