@@ -68,6 +68,20 @@ command! -range -nargs=0 Delete <line1>,<line2>d|norm ``
 " Split single line in multiple after comma ,
 command! NewLineAfterComma %s/,/,\r/g
 
+" Auto remote trailing whitespace on buffer save
+function! <SID>StripTrailingWhitespaces()
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  %s/\s\+$//e
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
