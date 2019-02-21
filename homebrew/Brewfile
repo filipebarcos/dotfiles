@@ -36,16 +36,19 @@ cask 'dropbox'
 cask 'firefox'
 cask 'google-chrome'
 cask 'osxfuse'
-cask 'slack'
 cask 'spectacle'
 cask 'spotify'
 cask 'telegram'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'alfred'
+cask 'homebrew/cask-drivers/logitech-options'
 
 mas 'pixelmator', id: 407963104
 mas 'twitter', id: 409789998
 mas 'amphetamine', id: 937984704
-mass 'Tweetbot 2 for Twitter', id: 557168941
+mas 'Tweetbot 2 for Twitter', id: 557168941
 mas 'Xcode', id: 497799835
+mas 'Slack', id: 803453959
+mas 'NordVPN IKE - Unlimited VPN', id: 1116599239
+mas 'Bear', id: 1091189122
