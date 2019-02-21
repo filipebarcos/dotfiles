@@ -19,10 +19,6 @@ echo "Installing dependencies..."
 sh -c "$DOTFILES_ROOT/script/install_brew"
 echo "Done installing dependencies!"
 
-echo "Bootstraping dotfiles..."
-sh -c "$DOTFILES_ROOT/script/bootstrap"
-echo "Done bootstraping dotfiles!"
-
 cd "$(dirname $)"/..
 
 # find the installers and run them iteratively
