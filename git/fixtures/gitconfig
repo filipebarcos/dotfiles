@@ -1,0 +1,4 @@
+[include]
+  path = .gitconfig.base
+[includeIf "gitdir:~/src/github.com/Shopify*"]
+  path = .gitconfig.shopify
