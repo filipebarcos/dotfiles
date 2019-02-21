@@ -13,7 +13,7 @@ then
   rustup update stable
 fi
 
-echo "  ✅ Cargo"
+echo "  ✅ Rustup + Cargo"
 
 if test ! $(which alacritty)
 then
