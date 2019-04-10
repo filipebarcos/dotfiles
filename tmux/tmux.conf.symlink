@@ -57,19 +57,19 @@ set -g history-limit 30000
 bind-key H split-window -h 'htop'
 
 # Line colors
-set -g pane-active-border-fg '#A20B14'
-set -g pane-border-fg '#EEEEEE'
+set -g pane-active-border-fg '#4bf442'
+set -g pane-border-fg '#4bf442'
 
 ########################
 #### Set status bar ####
 ########################
 
 # Highlight active window
-set-window-option -g window-status-current-fg '#ea67be'
-set-window-option -g window-status-current-bg '#2c0b44'
+set-window-option -g window-status-current-fg '#111111'
+set-window-option -g window-status-current-bg '#4bf442'
 
-set -g status-bg '#ea67be'
-set -g status-fg '#2c0b44'
+set -g status-bg '#333333'
+set -g status-fg '#ffffff'
 set -g status-justify left
 # set utf-8
 set -gq status-utf8 on
