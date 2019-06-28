@@ -1,6 +1,12 @@
 " Colorscheme
 colorscheme tender
 
+" NERDTree #########################################################################
+map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
+map <silent> <LocalLeader>nf :NERDTreeFind<CR>
+let NERDTreeIgnore = ['\.beam$', 'tags', '\.git$', '\.DS_Store$']
+let NERDTreeShowHidden = 1
+
 " FZF ##############################################################################
 map <silent> <LocalLeader>ff :FZF<CR>
 map <silent> <LocalLeader>fb :Buffers<CR>
