@@ -30,4 +30,6 @@ Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
 Plugin 'jacoborus/tender.vim'
 
+Plugin 'Shopify/shadowenv.vim'
+
 call vundle#end()
