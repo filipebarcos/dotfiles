@@ -26,7 +26,7 @@ set -g default-command "reattach-to-user-namespace -l ${SHELL}"
 bind y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 
 # reload tmux configs
-bind r run "tmux source-file ~/.tmux.conf"
+bind R run "tmux source-file ~/.tmux.conf"
 
 #faster ESC response
 set -s escape-time 0
@@ -57,24 +57,26 @@ set -g history-limit 30000
 bind-key H split-window -h 'htop'
 
 # Line colors
-set -g pane-active-border-style fg='#4bf442'
-set -g pane-border-style fg='#4bf442'
+set -g pane-active-border-style fg='red'
+set -g pane-border-style fg='red'
 
 ########################
 #### Set status bar ####
 ########################
 
 # Highlight active window
-set-window-option -g window-status-current-style fg='#111111'
-set-window-option -g window-status-current-style bg='#4bf442'
+set -g window-status-current-style fg='yellow',bg='#e75480'
 
+set -g status-style fg='white',bg='#5A2962'
 
-set -g status-bg '#333333'
-set -g status-fg '#ffffff'
+# Left status style
+set -g status-left-style fg='yellow'
+set -g status-left-length 50
+set -g status-left ' #S |> '
+
 set -g status-justify left
 # set utf-8
 set -gq status-utf8 on
 
-set -g status-left-length 40
-set -g status-left ' #S|'
+set -g status-right-style fg='white'
 set -g status-right "|#h: #(date +'%a, %b %d  %R') "
