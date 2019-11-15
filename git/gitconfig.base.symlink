@@ -32,6 +32,7 @@
   pushf = push --force-with-lease
   pam = !$ZSH/bin/git-pam
   pom = pull origin master
+  prom = pom --rebase
   goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
   update-commit-graph = !"git show-ref -s | git commit-graph write --stdin-commits"
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
