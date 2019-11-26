@@ -7,3 +7,5 @@ neovim/config.symlink/*
 terminfo/terminfo.symlink/*
 .DS_Store
 tags
+.vscode/
+.vscode/*
