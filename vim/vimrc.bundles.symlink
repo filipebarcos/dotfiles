@@ -27,6 +27,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'fatih/vim-go'
 Plugin 'sbdchd/neoformat'
 Plugin 'w0rp/ale'
+Plugin 'rust-lang/rust.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'jacoborus/tender.vim'
 
