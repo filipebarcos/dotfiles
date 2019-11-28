@@ -29,6 +29,7 @@ brew 'mas'
 brew 'neovim'
 brew 'fzf'
 brew 'ripgrep'
+brew 'universal-ctags/universal-ctags/universal-ctags'
 
 cask '1password'
 cask 'appcleaner'
