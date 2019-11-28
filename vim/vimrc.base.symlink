@@ -39,8 +39,6 @@ set wildmenu                      " Enhanced command line completion
 set wildmode=longest,list:longest " Complete files like shell
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*node_modules/**,*DS_Store*,*.gem,log/**,tmp/**,*.png,*.jpg,*.heic,*.gif
 
-set completeopt=noinsert,menuone,noselect " FIXME
-
 " With this config, I can za and hide indented content
 set foldmethod=syntax
 set foldlevelstart=99
