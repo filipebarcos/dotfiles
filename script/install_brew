@@ -19,6 +19,7 @@ if test ! $(brew cask)
 then
   echo "Installing brewcask"
   brew tap caskroom/cask
+  brew tap homebrew/cask-drivers
 fi
 
 if test ! $(brew bundle --help)

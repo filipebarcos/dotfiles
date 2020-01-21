@@ -29,13 +29,11 @@ brew 'mas'
 brew 'neovim'
 brew 'fzf'
 brew 'ripgrep'
-brew 'universal-ctags/universal-ctags/universal-ctags'
+brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 
-cask '1password'
 cask 'appcleaner'
 cask 'dropbox'
 cask 'firefox'
-cask 'google-chrome'
 cask 'osxfuse'
 cask 'spectacle'
 cask 'spotify'
@@ -43,11 +41,10 @@ cask 'telegram'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'alfred'
-cask 'homebrew/cask-drivers/logitech-options'
+cask 'logitech-options'
 
 mas 'pixelmator', id: 407963104
 mas 'amphetamine', id: 937984704
 mas 'Xcode', id: 497799835
 mas 'Slack', id: 803453959
 mas 'NordVPN IKE - Unlimited VPN', id: 1116599239
-mas 'Bear', id: 1091189122
