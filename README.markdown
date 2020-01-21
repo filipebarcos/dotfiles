@@ -8,7 +8,7 @@ This is **heavily** inspired by [@holman's dotfiles](https://github.com/holman/d
 Run this:
 
 ```sh
-git clone https://github.com/filipebarcos/dotfiles.git ~/.dotfiles
+git clone git@github.com:filipebarcos/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
