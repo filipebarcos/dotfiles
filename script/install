@@ -7,7 +7,7 @@ DOTFILES_ROOT="`pwd`"
 
 echo "Creating required folders..."
 [ -d ~/tmp ] || mkdir ~/tmp
-[ -d ~/workspace ] || mkdir ~/workspace
+[ -d ~/golang ] || mkdir ~/golang
 [ -d ~/src ] || mkdir ~/src
 echo "Done creating required folders!"
 

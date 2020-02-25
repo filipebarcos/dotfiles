@@ -30,6 +30,7 @@ brew 'neovim'
 brew 'fzf'
 brew 'ripgrep'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
+brew 'go'
 
 cask 'appcleaner'
 cask 'dropbox'
