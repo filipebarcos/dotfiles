@@ -3,7 +3,7 @@ unbind C-b
 set-option -g prefix 'C-\'
 
 # C-\ C-\ jumps to the last open window
-bind-key C-\ last-window
+bind-key 'C-\' last-window
 
 # After version 1.9m default-path was removed
 bind-key c new-window -c "#{pane_current_path}"
