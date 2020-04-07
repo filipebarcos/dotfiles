@@ -6,7 +6,8 @@ alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
 alias fga='git add $(git ls-files . --modified --exclude-standard --others | fzf --multi --tac --marker=+) && git status'
-alias fgr='git restore --staged $(git diff --name-only --cached | fzf --multi) && git status'
+alias fgr='git restore --staged $(git diff --name-only --cached | fzf --multi --tac --marker=-) && git status'
+alias fgbd='git br -D $(git br | fzf --multi --tac --marker=D) && git br'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
@@ -27,5 +28,5 @@ alias gpush="git rev-parse --abbrev-ref HEAD | git push origin $1"
 alias gpull="git rev-parse --abbrev-ref HEAD | git pull origin $1"
 alias gitpushf="git pushf"
 
-# hub related aliases
-alias pr="hub pull-request"
+# gh related aliases
+alias pr="gh pr create"
