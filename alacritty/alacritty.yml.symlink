@@ -67,12 +67,12 @@ font:
   # false.
   use_thin_strokes: true
 
-# Colors (Dracula)
+# Colors (Dracula Van Helsing)
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+    background: '0x0B0D0F'
+    foreground: '0xF8F8F2'
 
     # Bright and dim foreground colors
     #
@@ -87,44 +87,36 @@ colors:
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
   cursor:
-    text: '0x44475a'
-    cursor: '0xf8f8f2'
+    cursor: '0xFF80BF'
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area. If selection
+  # background is unset, selection color will be the inverse of the cell colors.
+  # If only text is unset the cell text color will remain the same.
+  selection:
+    background: '0x414D58'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xbd93f9'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+    black:   '0x0B0D0F'
+    red:     '0xFF9580'
+    green:   '0x8AFF80'
+    yellow:  '0xFFFF80'
+    blue:    '0x708CA9'
+    magenta: '0xFF80BF'
+    cyan:    '0x80FFEA'
+    white:   '0x666666'
 
-  # Bright colors
   bright:
-    black:   '0x4d4d4d'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  dim:
-    black:   '0x14151b'
-    red:     '0xff2222'
-    green:   '0x1ef956'
-    yellow:  '0xebf85b'
-    blue:    '0x4d5b86'
-    magenta: '0xff46b0'
-    cyan:    '0x59dffc'
-    white:   '0xe6e6d1'
+    black:   '0x999999'
+    red:     '0xFF9580'
+    green:   '0x8AFF80'
+    yellow:  '0xFFFF80'
+    blue:    '0x708CA9'
+    magenta: '0xFF80BF'
+    cyan:    '0x80FFEA'
+    white:   '0xFFFFFF'
 
   # Indexed Colors
   #
