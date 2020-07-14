@@ -65,6 +65,8 @@
 [help]
   autocorrect = 1
 
+[pull]
+  ff = only
 [push]
   default = simple
 [github]
