@@ -669,6 +669,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "rectangle": {
+        "version": "0.30",
+        "options": {
+          "full_name": "rectangle",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     },
     "mas": {
