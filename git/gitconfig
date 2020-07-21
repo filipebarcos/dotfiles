@@ -55,15 +55,11 @@
 
 [core]
   editor = nvim
-  pager = delta --dark
+  pager = delta --theme='GitHub'
   commitGraph = true
 
 [interactive]
   diffFilter = delta --color-only
-
-[delta]
-  syntax-theme = Dracula
-  line-numbers = true
 
 [apply]
   whitespace = nowarn
