@@ -1,6 +1,7 @@
 [user]
   name = Filipe Costa
   email = filipebarcos@gmail.com
+	signingkey = BE7C871C90A748E8
 
 [credential]
   helper = osxkeychain
@@ -81,3 +82,5 @@
   enabled = true
 [interactive]
   diffFilter = delta --color-only
+[init]
+  defaultBranch = main
