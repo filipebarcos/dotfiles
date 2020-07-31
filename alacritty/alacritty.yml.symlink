@@ -41,7 +41,7 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Jetbrains Mono
+    family: Cascadia Code PL
 
   # Point size of the font
   size: 18.0
