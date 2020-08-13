@@ -15,3 +15,7 @@ then
 fi
 
 vim -c 'CocInstall -sync coc-json coc-tsserver coc-go coc-sql'
+
+# Install Dracula PRO colorschemes
+mkdir -p ~/.vim/plugged/dracula_pro
+cp -r "$CLOUD_DRIVE/DEV/dracula-pro/themes/vim/*" ~/.vim/plugged/dracula_pro/

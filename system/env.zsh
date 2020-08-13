@@ -2,3 +2,5 @@
 if [[ "$EDITOR" == "" ]] ; then
   export EDITOR='nvim'
 fi
+
+export CLOUD_DRIVE="~/Library/Mobile Documents/com~apple~CloudDocs/"
