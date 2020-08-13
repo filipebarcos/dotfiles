@@ -86,7 +86,8 @@ colors:
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
   cursor:
-    cursor: '0xFF80BF'
+    cursor: '0x708CA9'
+    text: '0xFEFFFF'
 
   # Selection colors
   #
@@ -94,27 +95,28 @@ colors:
   # background is unset, selection color will be the inverse of the cell colors.
   # If only text is unset the cell text color will remain the same.
   selection:
+    text: '0x000000'
     background: '0x414D58'
 
   # Normal colors
   normal:
-    black:   '0x0B0D0F'
+    black:   '0x414D58'
     red:     '0xFF9580'
     green:   '0x8AFF80'
     yellow:  '0xFFFF80'
-    blue:    '0x708CA9'
+    blue:    '0x9580FF'
     magenta: '0xFF80BF'
     cyan:    '0x80FFEA'
-    white:   '0x666666'
+    white:   '0xF8F8F2'
 
   bright:
-    black:   '0x999999'
-    red:     '0xFF9580'
-    green:   '0x8AFF80'
-    yellow:  '0xFFFF80'
-    blue:    '0x708CA9'
-    magenta: '0xFF80BF'
-    cyan:    '0x80FFEA'
+    black:   '0x4C5967'
+    red:     '0xFFAA99'
+    green:   '0xA2FF99'
+    yellow:  '0xFFFF99'
+    blue:    '0xAA99FF'
+    magenta: '0xFF99CC'
+    cyan:    '0x99FFEE'
     white:   '0xFFFFFF'
 
   # Indexed Colors
