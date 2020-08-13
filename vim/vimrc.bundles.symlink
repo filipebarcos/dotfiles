@@ -26,7 +26,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
-Plug 'morhetz/gruvbox'
-Plug 'jacoborus/tender.vim'
+Plug '~/.vim/plugged/dracula_pro', { 'as': 'dracula_pro' }
 
 call plug#end()

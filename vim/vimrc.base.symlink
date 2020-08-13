@@ -1,7 +1,10 @@
+if exists('+termguicolors')
+  set termguicolors
+endif
+
 if has('nvim')
   scriptencoding utf-8
   set encoding=utf-8
-  set termguicolors
 endif
 
 " Disable swap files

@@ -1,5 +1,4 @@
-" Colorscheme ##################################################################
-colorscheme tender
+colorscheme dracula_pro_van_helsing
 
 " NERDTree #####################################################################
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
@@ -21,7 +20,7 @@ let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclu
 
 " Lightline ####################################################################
 let g:lightline = {
-  \ 'colorscheme': 'tender',
+  \ 'colorscheme': 'dracula_pro',
   \ 'active': {
   \   'right': [ [ 'lineinfo' ],
   \              [ 'percent' ],
