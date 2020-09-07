@@ -14,4 +14,6 @@ else
   asdf plugin-add elixir
   asdf plugin-add go https://github.com/kennyp/asdf-golang.git
   bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+  echo 'bundler' > $HOME/.default-gems
 fi
