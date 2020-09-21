@@ -25,7 +25,7 @@ set number                     " Set line numbers
 set scrolloff=3                " Show 3 lines of context around the cursor
 set showcmd                    " Display incomplete commands
 set cmdheight=1                " Give more space for displaying messages
-set updatetime=300             " Reduce updatetime for better UX (default is 4000)
+set updatetime=200             " Reduce updatetime for better UX (default is 4000)
 set showmatch                  " highlight match when found
 set showmode                   " Display the mode you're in
 set shortmess+=c               " Dont pass messages to \|ins-completion-menu\|

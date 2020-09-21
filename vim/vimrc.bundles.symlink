@@ -12,6 +12,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-abolish'
 Plug 'elixir-lang/vim-elixir'
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
@@ -24,7 +25,6 @@ Plug 'janko-m/vim-test'
 Plug 'Townk/vim-autoclose'
 Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug '~/.vim/plugged/dracula_pro', { 'as': 'dracula_pro' }
 
