@@ -28,8 +28,6 @@ export CARGO_PATH=$HOME/.cargo
 export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
 # Prepend programming language binaries via ASDF shims
-PATH="$HOME/.asdf/bin:$PATH"
-PATH="$HOME/.asdf/shims:$PATH"
 PATH="$GOPATH/bin:$PATH"
 PATH="$CARGO_PATH/bin:$PATH"
 PATH="$ZSH/bin:$PATH"
