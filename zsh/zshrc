@@ -17,5 +17,9 @@ compinit
 
 source $ZSH/zsh/completion.zsh
 
+# FZF
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
 # starship.rs
 eval "$(starship init zsh)"
+. $(brew --prefix asdf)/asdf.sh

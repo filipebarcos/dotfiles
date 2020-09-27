@@ -19,7 +19,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # FZF
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!{.git,node_modules,log,sorbet,rbi,vendor,vcr_cassettes}/*'"
-export FZF_DEFAULT_OPTS="--inline-info"
+export FZF_DEFAULT_OPTS="--inline-info --height 40% --layout=reverse --border"
 
 # Rust/Cargo
 export CARGO_PATH=$HOME/.cargo
@@ -27,7 +27,15 @@ export CARGO_PATH=$HOME/.cargo
 # CloudDrive
 export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
-export PATH="$HOME/bin:$ZSH/bin:$PATH:$CARGO_PATH/bin:$GOPATH/bin"
+# Prepend programming language binaries via ASDF shims
+PATH="$HOME/.asdf/bin:$PATH"
+PATH="$HOME/.asdf/shims:$PATH"
+PATH="$GOPATH/bin:$PATH"
+PATH="$CARGO_PATH/bin:$PATH"
+PATH="$ZSH/bin:$PATH"
+PATH="$HOME/bin:$PATH"
+PATH="$PATH:/usr/local/opt/fzf/bin"
+export -U PATH
 
 export LC_ALL=en_US.UTF-8
 
