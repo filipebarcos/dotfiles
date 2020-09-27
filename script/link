@@ -10,10 +10,11 @@ link_files () {
 
 link_files "zsh/zshenv" ".zshenv"
 link_files "zsh/zshrc" ".config/zsh/.zshrc"
+
 link_files "alacritty/alacritty.yml" ".config/alacritty/alacritty.yml"
 link_files "git/gitignore" ".gitignore"
 link_files "git/gitconfig" ".gitconfig"
-link_files "neovim/init.vim" ".config/nvim/init.vim"
+
 link_files "ruby/gemrc" ".gemrc"
 link_files "ruby/irbrc" ".irbrc"
 link_files "starship/starship.toml" ".config/starship.toml"
@@ -22,6 +23,8 @@ link_files "tmux/tmux.conf" ".tmux.conf"
 link_files "vim/vimrc.base" ".vimrc.base"
 link_files "vim/vimrc.bundles" ".vimrc.bundles"
 link_files "vim/vimrc.mappings" ".vimrc.mappings"
+link_files "vim/vimrc.plugins" ".vimrc.plugins"
 link_files "vim/vimrc.snippets" ".vimrc.snippets"
 link_files "vim/vimrc" ".vimrc"
+link_files "neovim/init.vim" ".config/nvim/init.vim"
 exit 0

@@ -11,20 +11,21 @@ set -e
 
 if test ! $(which brew)
 then
-  echo "  Installing Homebrew for you."
+  echo "  💽 Installing Homebrew for you."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
 else
-  echo "Brew is already installed, updating it for you"
+  echo "  ✅ Brew is already installed. Updating instead..."
   brew update
 fi
 
 if test ! $(brew bundle --help)
 then
-  echo "Installing brew-bundle"
+  echo "  💽 Installing brew-bundle"
   brew tap homebrew/bundle
 fi
 
 # Install homebrew packages
-
+echo "  💽 Installing brew formules from Brewfile"
 brew bundle --file=$HOME/.dotfiles/homebrew/Brewfile
-exit 0
+
+echo "  ✅ Done with Homebrew"

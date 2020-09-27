@@ -4,14 +4,6 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export LSCOLORS="exfxcxdxbxegedabagacad"
-export CLICOLOR=true
-export TERM=xterm-256color
-
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
 setopt NO_LIST_BEEP
@@ -35,3 +27,22 @@ setopt HIST_REDUCE_BLANKS
 setopt complete_aliases
 
 zle -N newtab
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
+bindkey '^[[H'    beginning-of-line # fn + <-
+bindkey '^[[1~'   beginning-of-line # fn + <- (tmux)
+
+bindkey '^[[F'    end-of-line # fn + ->
+bindkey '^[[4~'   end-of-line # fn + -> (tmux)
+
+
+bindkey '^[[1;5D' backward-word # ctrl + <- (tmux and non-tmux)
+bindkey '^[[1;5C' forward-word  # ctrl + -> (tmux and non-tmux)
+
+bindkey '^[[1;3D' backward-word #alt + <- (tmux)
+bindkey '^[[1;3C' forward-word  #alt + -> (tmux)
+
+bindkey '^[^[[D' backward-word #alt + <-
+bindkey '^[^[[C' forward-word  #alt + ->

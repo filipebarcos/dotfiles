@@ -1,5 +1,3 @@
-eval "$(starship init zsh)"
-
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]
@@ -7,29 +5,17 @@ then
   source ~/.localrc
 fi
 
-bindkey -v
-bindkey '^R' history-incremental-search-backward
+# Source all zsh configs
+source $ZSH/zsh/config.zsh
 
-bindkey '^[[H'    beginning-of-line # fn + <-
-bindkey '^[[1~'   beginning-of-line # fn + <- (tmux)
-
-bindkey '^[[F'    end-of-line # fn + ->
-bindkey '^[[4~'   end-of-line # fn + -> (tmux)
-
-
-bindkey '^[[1;5D' backward-word # ctrl + <- (tmux and non-tmux)
-bindkey '^[[1;5C' forward-word  # ctrl + -> (tmux and non-tmux)
-
-bindkey '^[[1;3D' backward-word #alt + <- (tmux)
-bindkey '^[[1;3C' forward-word  #alt + -> (tmux)
-
-bindkey '^[^[[D' backward-word #alt + <-
-bindkey '^[^[[C' forward-word  #alt + ->
-
+# Source all aliases
 source $ZSH/zsh/aliases.zsh
 
 # initialize autocomplete here, otherwise functions won't be loaded
-# autoload -U compinit
-# compinit
+autoload -U compinit
+compinit
 
-# source $ZSH/zsh/completion.zsh
+source $ZSH/zsh/completion.zsh
+
+# starship.rs
+eval "$(starship init zsh)"

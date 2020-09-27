@@ -24,7 +24,10 @@ export FZF_DEFAULT_OPTS="--inline-info"
 # Rust/Cargo
 export CARGO_PATH=$HOME/.cargo
 
-export PATH="$HOME/bin:$ZSH/bin:$PATH:$HOME/.yarn/bin:$CARGO_PATH/bin:$GOPATH/bin"
+# CloudDrive
+export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
+
+export PATH="$HOME/bin:$ZSH/bin:$PATH:$CARGO_PATH/bin:$GOPATH/bin"
 
 export LC_ALL=en_US.UTF-8
 

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export CURRENT_TMUX_SESSION=$1
+tmux -u new-session -s $1

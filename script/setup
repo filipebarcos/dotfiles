@@ -5,7 +5,7 @@
 set -e
 DOTFILES_ROOT="`pwd`"
 
-echo "Creating required folders..."
+echo "  🔨 Creating required folders..."
 [ -d ~/tmp ] || mkdir ~/tmp
 [ -d ~/src ] || mkdir ~/src
 if [[ ! -a ~/.config ]]
@@ -18,10 +18,17 @@ then
   mkdir ~/.config/alacritty
   mkdir ~/.config/nvim
 fi
-echo "Done creating required folders!"
+echo "  ✅ Done creating required folders!"
 
-echo "Linking files..."
+echo "  🔗 Linking files..."
 sh -c "$DOTFILES_ROOT/script/link"
-echo "Done linking files!"
+echo "  ✅ Done with links"
 
-cd "$(dirname $)"/..
+echo "  🤞🏻 Starting with the installers..."
+# Install all dependencies
+for file in installers/*; do
+  chmod +x $file
+  sh -c $file
+done
+
+echo "  🚀 We're all done and you're ready to rock! 🤘🏻"
