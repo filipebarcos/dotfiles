@@ -5,22 +5,23 @@ DOTFILES_ROOT="`pwd`"
 set -e
 
 link_files () {
-  ln -s $1 $2
+  ln -sf "$DOTFILES_ROOT/$1" "$HOME/$2"
 }
 
-link_dotfiles () {
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
-  do
-    dest="$HOME/.`basename \"${source%.*}\"`"
+link_files "zsh/zshenv" ".zshenv"
+link_files "zsh/zshrc" ".config/zsh/.zshrc"
+link_files "alacritty/alacritty.yml" ".config/alacritty/alacritty.yml"
+link_files "git/gitignore" ".gitignore"
+link_files "git/gitconfig" ".gitconfig"
+link_files "neovim/init.vim" ".config/nvim/init.vim"
+link_files "ruby/gemrc" ".gemrc"
+link_files "ruby/irbrc" ".irbrc"
+link_files "starship/starship.toml" ".config/starship.toml"
+link_files "tmux/tmux.conf" ".tmux.conf"
 
-    if [ -f $dest ] || [ -d $dest ]
-    then
-      rm -rf $dest
-    fi
-
-    link_files $source $dest
-  done
-}
-
-link_dotfiles
+link_files "vim/vimrc.base" ".vimrc.base"
+link_files "vim/vimrc.bundles" ".vimrc.bundles"
+link_files "vim/vimrc.mappings" ".vimrc.mappings"
+link_files "vim/vimrc.snippets" ".vimrc.snippets"
+link_files "vim/vimrc" ".vimrc"
 exit 0

@@ -7,19 +7,21 @@ DOTFILES_ROOT="`pwd`"
 
 echo "Creating required folders..."
 [ -d ~/tmp ] || mkdir ~/tmp
-[ -d ~/golang ] || mkdir ~/golang
 [ -d ~/src ] || mkdir ~/src
+if [[ ! -a ~/.config ]]
+then
+  mkdir ~/.config
+  mkdir ~/.config/local
+  mkdir ~/.config/local/share
+  mkdir ~/.config/cache
+  mkdir ~/.config/zsh
+  mkdir ~/.config/alacritty
+  mkdir ~/.config/nvim
+fi
 echo "Done creating required folders!"
 
 echo "Linking files..."
 sh -c "$DOTFILES_ROOT/script/link"
 echo "Done linking files!"
 
-echo "Installing dependencies..."
-sh -c "$DOTFILES_ROOT/script/install_brew"
-echo "Done installing dependencies!"
-
 cd "$(dirname $)"/..
-
-# find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
