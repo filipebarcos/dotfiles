@@ -14,9 +14,11 @@ autocmd! FileType fzf
 autocmd  FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-let g:fzf_buffers_jump = 1 " [Buffers] Jump to the existing window if possible
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 " [Tags] Command to generate tags file
-let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test --exclude=log --exclude=vendor'
+let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=spec/vcr_cassettes --exclude=test --exclude=log --exclude=vendor'
+let g:fzf_layout = { 'down': '30%' }
 
 " Lightline ####################################################################
 let g:lightline = {

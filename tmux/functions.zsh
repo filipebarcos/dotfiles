@@ -1,5 +1,5 @@
 tat() {
-  eval "$(tmux attach-session -t $1)"
+  tmux attach-session -t $1
 }
 
 tnew() {
@@ -10,4 +10,8 @@ tnew() {
 # Credits: https://github.com/lf94/peek-for-tmux
 peek() {
   tmux split-window -p 33 "$EDITOR" "$@" || exit;
+}
+
+tlist() {
+  tmux list-sessions
 }
