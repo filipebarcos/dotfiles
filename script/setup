@@ -24,10 +24,9 @@ echo "  🔗 Linking files..."
 sh -c "$DOTFILES_ROOT/script/link"
 echo "  ✅ Done with links"
 
-echo "  🤞🏻 Starting with the installers..."
+echo "  🤞 Starting with the installers..."
 # Install all dependencies
 for file in installers/*; do
-  chmod +x $file
   sh -c $file
 done
 

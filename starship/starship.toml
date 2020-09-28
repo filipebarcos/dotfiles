@@ -1,5 +1,33 @@
-[character]
-symbol = "➜"
+prompt_order = [
+  "directory",
+  "git_branch",
+  "git_commit",
+  "git_state",
+  "git_status",
+  "package",
+  "golang",
+  "ruby",
+  "cmd_duration",
+  "line_break",
+  "character",
+]
+
+[cmd_duration]
+show_milliseconds = true
+style = "bold grey"
+min_time = 1_000
+
+[directory]
+fish_style_pwd_dir_length = 1
+truncation_length = 2
 
 [git_branch]
 symbol = "🌱"
+
+[golang]
+symbol = "🦦"
+
+[time]
+disabled = false
+format = "[%T]"
+style = "dimmed black"
