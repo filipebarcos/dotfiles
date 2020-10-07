@@ -1,16 +1,16 @@
-prompt_order = [
-  "directory",
-  "git_branch",
-  "git_commit",
-  "git_state",
-  "git_status",
-  "package",
-  "golang",
-  "ruby",
-  "cmd_duration",
-  "line_break",
-  "character",
-]
+format = """\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $package\
+  $golang\
+  $ruby\
+  $cmd_duration\
+  $line_break\
+  $character\
+"""
 
 [cmd_duration]
 show_milliseconds = true
