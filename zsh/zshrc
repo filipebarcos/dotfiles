@@ -12,16 +12,23 @@ source $ZSH/zsh/config.zsh
 source $ZSH/zsh/aliases.zsh
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+autoload -Uz compinit; compinit
+autoload -Uz bashcompinit; bashcompinit
 
 source $ZSH/zsh/completion.zsh
+
+# source $HOME/.bash_profile
+# source $HOME/.bashrc
 
 # FZF
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # starship.rs
 eval "$(starship init zsh)"
-# . $(brew --prefix asdf)/asdf.sh
+
+# nodenv
+eval "$(nodenv init -)"
+
+compdef _git stripe-git=git
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
