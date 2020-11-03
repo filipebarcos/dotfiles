@@ -3,10 +3,10 @@ format = """\
   $git_branch\
   $git_commit\
   $git_state\
-  $git_status\
   $package\
   $golang\
   $ruby\
+  $python\
   $cmd_duration\
   $line_break\
   $character\
@@ -27,7 +27,11 @@ symbol = "🌱"
 [golang]
 symbol = "🦦"
 
+[python]
+symbol = "🐍"
+
 [time]
 disabled = false
 format = "[%T]"
 style = "dimmed black"
+

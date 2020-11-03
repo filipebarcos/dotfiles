@@ -17,8 +17,8 @@ autoload -Uz bashcompinit; bashcompinit
 
 source $ZSH/zsh/completion.zsh
 
-# source $HOME/.bash_profile
-# source $HOME/.bashrc
+source $HOME/.bash_profile
+source $HOME/.bashrc
 
 # FZF
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
