@@ -181,6 +181,9 @@
 # # Dock & hot corners                                                          #
 # ###############################################################################
 
+# Show app switcher in all screens
+defaults write com.apple.Dock appswitcher-all-displays -bool true
+
 # # Enable highlight hover effect for the grid view of a stack (Dock)
 # #defaults write com.apple.dock mouse-over-hilte-stack -bool true
 
