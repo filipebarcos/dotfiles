@@ -1,31 +1,31 @@
 # # Disable transparency in the menu bar and elsewhere
-# defaults write com.apple.universalaccess reduceTransparency -bool true
-# defaults write AppleEnableMenuBarTransparency -bool false
+defaults write com.apple.universalaccess reduceTransparency -bool true
+defaults write AppleEnableMenuBarTransparency -bool false
 
 # # Disable animations when opening windows
-# defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # # Disable animations when opening Quick Look panes
-# defaults write -g QLPanelAnimationDuration -float 0
+defaults write -g QLPanelAnimationDuration -float 0
 
 # # Disable animations for cmd+i
-# defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 # # Increase window resize speed for Cocoa applications
-# defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # # Expand save panel by default
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-# defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # # Expand print panel by default
-# defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # # Save to disk (not to iCloud) by default
 # defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # # Automatically quit printer app once the print jobs complete
-# defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # # Disable the “Are you sure you want to open this application?” dialog
 # # Thanks god for existing this config =D
@@ -42,7 +42,7 @@
 # defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # # Allowing text selection in Quick Look/Preview in Finder by default
-# defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # # in the login window
@@ -62,7 +62,7 @@
 # # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadFourFingerHorizSwipeGesture -int 1
 
 # # Disable “natural” (Lion-style) scrolling
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # # Increase sound quality for Bluetooth headphones/headsets
 # defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -72,13 +72,13 @@
 # defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # # Disable press-and-hold for keys in favor of key repeat
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # # Set a blazingly fast keyboard repeat rate
-# defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # # Disable auto-correct
-# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # ###############################################################################
 # # Screen                                                                      #
@@ -113,16 +113,16 @@
 # defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # # Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool false
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # # Finder: show all filename extensions
 # defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # # Finder: show status bar
-# defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # # Finder: allow text selection in Quick Look
-# defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # # Display full POSIX path as Finder window title
 # defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -163,7 +163,7 @@
 # # Icon-view: `icnv`
 # # Column View: `clmv`
 # # Coverflow: `Flwv`
-# defaults write com.apple.finder FXPreferredViewStyle Clmv
+defaults write com.apple.finder FXPreferredViewStyle clmv
 
 # # Enable the warning before emptying the Trash
 # defaults write com.apple.finder WarnOnEmptyTrash -bool true
@@ -175,7 +175,7 @@
 # defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # # Show the ~/Library folder
-# chflags nohidden ~/Library
+chflags nohidden ~/Library
 
 # ###############################################################################
 # # Dock & hot corners                                                          #

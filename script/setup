@@ -8,16 +8,13 @@ DOTFILES_ROOT="`pwd`"
 echo "  🔨 Creating required folders..."
 [ -d ~/tmp ] || mkdir ~/tmp
 [ -d ~/src ] || mkdir ~/src
-if [[ ! -a ~/.config ]]
-then
-  mkdir ~/.config
-  mkdir ~/.config/local
-  mkdir ~/.config/local/share
-  mkdir ~/.config/cache
-  mkdir ~/.config/zsh
-  mkdir ~/.config/alacritty
-  mkdir ~/.config/nvim
-fi
+[ -d ~/.config ] || mkdir ~/.config
+[ -d ~/.config/local ] || mkdir ~/.config/local
+[ -d ~/.config/local/share ] || mkdir ~/.config/local/share
+[ -d ~/.config/cache ] || mkdir ~/.config/cache
+[ -d ~/.config/zsh ] || mkdir ~/.config/zsh
+[ -d ~/.config/alacritty ] || mkdir ~/.config/alacritty
+[ -d ~/.config/nvim ] || mkdir ~/.config/nvim
 echo "  ✅ Done creating required folders!"
 
 echo "  🔗 Linking files..."
@@ -25,6 +22,7 @@ sh -c "$DOTFILES_ROOT/script/link"
 echo "  ✅ Done with links"
 
 echo "  🤞 Starting with the installers..."
+
 # Install all dependencies
 for file in installers/*; do
   sh -c $file

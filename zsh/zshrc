@@ -22,4 +22,6 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # starship.rs
 eval "$(starship init zsh)"
-. $(brew --prefix asdf)/asdf.sh
+# . $(brew --prefix asdf)/asdf.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
