@@ -12,7 +12,7 @@
 [alias]
   co = checkout
   ci = commit
-  st = status -s
+  st = status
   br = branch
   type = cat-file -t
   dump = cat-file -p
@@ -31,11 +31,14 @@
   staaash= stash --all
   clean-branches= !"git branch | grep -v master | xargs git branch -D"
   pushf = push --force-with-lease
+  pusho = push -u origin HEAD
   pam = !$ZSH/bin/git-pam
   pom = pull origin master
   prom = pom --rebase
   goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
   update-commit-graph = !"git show-ref -s | git commit-graph write --stdin-commits"
+  remote-fetch = "!rf() { git config --add remote.origin.fetch +refs/heads/$1:refs/remotes/origin/$1; git fetch origin +$1:refs/remotes/origin/$1; }; rf"
+  remote-purge = "!rp() { git config --unset remote.origin.fetch \".*$1.*\"; git update-ref -d refs/remotes/origin/$1; }; rp"
   co-pr = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
 
 [color]
@@ -52,7 +55,14 @@
 
 [core]
   editor = nvim
-  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+  pager = delta --dark
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  syntax-theme = Dracula
+  line-numbers = true
 
 [apply]
   whitespace = nowarn

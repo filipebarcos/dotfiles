@@ -7,7 +7,6 @@ format = """\
   $golang\
   $ruby\
   $python\
-  $cmd_duration\
   $line_break\
   $character\
 """
@@ -17,21 +16,25 @@ show_milliseconds = true
 style = "bold grey"
 min_time = 1_000
 
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](green)"
+
 [directory]
 fish_style_pwd_dir_length = 1
 truncation_length = 2
+style = "blue"
 
 [git_branch]
-symbol = "🌱"
+symbol = "🌱 "
 
 [golang]
 symbol = "🦦"
 
 [python]
-symbol = "🐍"
+style = "yellow"
 
 [time]
-disabled = false
-format = "[%T]"
-style = "dimmed black"
+disabled = true
 
+scan_timeout = 10 # wait to scan files in dir
