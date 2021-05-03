@@ -41,9 +41,15 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
+# git checkout with fzf help to select the branch
+alias fco='git co $(git br | fzf)'
+# git add with fzf help with multi-file support
 alias fga='git add $(git ls-files . --modified --exclude-standard --others | fzf --multi --tac --marker=+) && git status'
+# git restore with fzf help with multi-file support
 alias fgr='git restore --staged $(git diff --name-only --cached | fzf --multi --tac --marker=-) && git status'
-alias fgbd='git br -D $(git br | fzf --multi --tac --marker=D) && git br'
+# delete git branches with fzf help with multi-select support
+alias fgdb='git br -D $(git br | fzf --multi --tac --marker=D) && git br'
+alias fgdel='fgbd'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
