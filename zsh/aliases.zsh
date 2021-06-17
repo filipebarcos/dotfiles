@@ -42,7 +42,7 @@ alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
 # git checkout with fzf help to select the branch
-alias fco='git co $(git br | fzf)'
+alias fco='git checkout $(git branch --sort=comitterdate | fzf)'
 # git add with fzf help with multi-file support
 alias fga='git add $(git ls-files . --modified --exclude-standard --others | fzf --multi --tac --marker=+) && git status'
 # git restore with fzf help with multi-file support
@@ -93,3 +93,7 @@ alias tmux="tmux -2"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
+
+#helpers
+alias utc="date -u +\"%Y-%m-%dT%H:%M:%SZ\""
+alias unix="gdate -u +\"%s\""
