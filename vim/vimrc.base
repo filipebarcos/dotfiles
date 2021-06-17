@@ -71,6 +71,8 @@ command! MakeTags !ctags -R --exclude=.git --exclude=node_modules --exclude=test
 command! -range -nargs=0 Delete <line1>,<line2>d|norm ``
 " Split single line in multiple after comma ,
 command! NewLineAfterComma %s/,/,\r/g
+" Join multi-lines in a single comman separated
+command! CommaInsteadOfNewLine %s/\n/, /g
 
 " Auto remote trailing whitespace on buffer save
 function! <SID>StripTrailingWhitespaces()
