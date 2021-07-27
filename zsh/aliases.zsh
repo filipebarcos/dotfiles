@@ -42,7 +42,7 @@ alias gdc='git diff --cached'
 alias gc='git commit'
 alias gca='git commit -a'
 # git checkout with fzf help to select the branch
-alias fco='git checkout $(git branch --sort=comitterdate | fzf)'
+alias fco='git checkout $(git branch --sort=committerdate | fzf)'
 # git add with fzf help with multi-file support
 alias fga='git add $(git ls-files . --modified --exclude-standard --others | fzf --multi --tac --marker=+) && git status'
 # git restore with fzf help with multi-file support

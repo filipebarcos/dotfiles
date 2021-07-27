@@ -1,6 +1,6 @@
 [user]
   name = Filipe Costa
-  email = filipebarcos@gmail.com
+  email = filipebarcos@stripe.com
 	signingKey = D4B22BC3A97C336C296B031BF2509C1631F3AEA8
 
 [credential]
@@ -95,4 +95,4 @@
 [init]
   defaultBranch = main
 [fetch]
-  prune = true
+	prune = true
