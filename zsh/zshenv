@@ -19,7 +19,11 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # FZF
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!{.git,node_modules,log,sorbet,rbi,vendor,vcr_cassettes}/*'"
-export FZF_DEFAULT_OPTS="--inline-info --height 40% --layout=reverse --border"
+export FZF_DEFAULT_OPTS='
+--inline-info --height 40% --layout=reverse --border
+--color fg:240,bg:230,hl:33,fg+:241,bg+:221,hl+:33
+--color info:33,prompt:33,pointer:166,marker:166,spinner:33
+'
 
 # Rust/Cargo
 export CARGO_PATH=$HOME/.cargo
