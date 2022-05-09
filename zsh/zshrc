@@ -20,6 +20,9 @@ source $ZSH/zsh/completion.zsh
 source $HOME/.bash_profile
 source $HOME/.bashrc
 
+# brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # FZF
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
