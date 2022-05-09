@@ -12,7 +12,7 @@ set -e
 if test ! $(which brew)
 then
   echo "  💽 Installing Homebrew for you."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" > /tmp/homebrew-install.log
 else
   echo "  ✅ Brew is already installed. Updating instead..."
   brew update
