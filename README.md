@@ -14,7 +14,7 @@ My old approach can still be found at `legacy` branch.
 ## How to use
 
 ```sh
-git clone https://github.com/filipebarcos/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
+git clone https://github.com/filipebarcos/dotfiles.git ~/.dotfiles && \
+cd ~/.dotfiles && \
 script/setup
 ```
