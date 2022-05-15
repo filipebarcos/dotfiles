@@ -15,7 +15,7 @@ fi
 
 echo "  ✅ Rustup + Cargo"
 
-if test ! $(which alacritty)
+if test $(ls $HOME/src/github.com/alacritty/target/release/osx/Alacritty.app >> /dev/null 2>&1)
 then
   echo "  👯‍♀️ Cloning Alacritty repo"
   git clone https://github.com/jwilm/alacritty.git $HOME/src/github.com/alacritty
