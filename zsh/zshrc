@@ -17,20 +17,11 @@ autoload -Uz bashcompinit; bashcompinit
 
 source $ZSH/zsh/completion.zsh
 
-source $HOME/.bash_profile
-source $HOME/.bashrc
-
 # brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# FZF
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-
 # starship.rs
 eval "$(starship init zsh)"
-
-# nodenv
-eval "$(nodenv init -)"
 
 compdef _git stripe-git=git
 
