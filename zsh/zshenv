@@ -21,9 +21,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!{.git,node_modules,log,sorbet,rbi,vendor,vcr_cassettes}/*'"
 export FZF_DEFAULT_OPTS="--inline-info --height 40% --layout=reverse --border"
 
-# Rust/Cargo
-export CARGO_PATH=$HOME/.cargo
-
 # CloudDrive
 export CLOUD_DRIVE="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 
@@ -40,4 +37,3 @@ export LC_ALL=en_US.UTF-8
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 export TERM=xterm-256color
-. "$HOME/.cargo/env"
