@@ -17,6 +17,7 @@ window:
   # Window dimensions in character columns and lines
   # (changes require restart)
   dynamic_title: true
+  opacity: 1.0
 
   dimensions:
     columns: 120
@@ -43,10 +44,10 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Cascadia Code PL
+    family: Fira Code Light
 
   # Point size of the font
-  size: 18.0
+  size: 16.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -156,9 +157,6 @@ bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
-background_opacity: 1.0
-
 # Mouse bindings
 #
 # Currently doesn't support modifiers. Both the `mouse` and `action` fields must
@@ -206,7 +204,7 @@ live_config_reload: true
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
 shell:
-  program: /usr/local/bin/zsh
+  program: /opt/homebrew/bin/zsh
   args:
     - --login
 
