@@ -1,16 +1,3 @@
-# # Disable transparency in the menu bar and elsewhere
-defaults write com.apple.universalaccess reduceTransparency -bool true
-defaults write AppleEnableMenuBarTransparency -bool false
-
-# # Disable animations when opening windows
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-
-# # Disable animations when opening Quick Look panes
-defaults write -g QLPanelAnimationDuration -float 0
-
-# # Disable animations for cmd+i
-defaults write com.apple.finder DisableAllAnimations -bool true
-
 # # Increase window resize speed for Cocoa applications
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
@@ -73,6 +60,7 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 # # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -175,7 +163,7 @@ defaults write com.apple.finder FXPreferredViewStyle clmv
 # defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # # Show the ~/Library folder
-chflags nohidden ~/Library
+# chflags nohidden ~/Library
 
 # ###############################################################################
 # # Dock & hot corners                                                          #
