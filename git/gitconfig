@@ -57,6 +57,7 @@
   editor = nvim
   pager = delta --dark
   commitGraph = true
+	fsmonitor = true
 
 [interactive]
   diffFilter = delta --color-only
