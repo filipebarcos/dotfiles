@@ -47,7 +47,7 @@ font:
     family: Victor Mono
 
   # Point size of the font
-  size: 16.0
+  size: 17.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -120,7 +120,7 @@ colors:
     magenta: '0xff99cc'
     cyan:    '0x99ffee'
     white:   '0xffffff'
-  
+
   # Indexed Colors
   #
   # The indexed colors include all colors from 16 to 256.
