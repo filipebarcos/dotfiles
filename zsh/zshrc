@@ -20,9 +20,14 @@ source $ZSH/zsh/completion.zsh
 # brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh
+
+# Rust/Cargo
+. "$HOME/.cargo/env"
+
 # starship.rs
 eval "$(starship init zsh)"
 
-compdef _git stripe-git=git
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

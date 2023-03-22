@@ -35,6 +35,6 @@ symbol = "🦦"
 style = "yellow"
 
 [time]
-disabled = true
+disabled = false
 
 scan_timeout = 10 # wait to scan files in dir
