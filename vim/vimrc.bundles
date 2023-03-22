@@ -26,6 +26,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'itchyny/lightline.vim'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
+Plug 'github/copilot.vim'
 Plug '~/.vim/plugged/dracula_pro', { 'as': 'dracula_pro' }
 
 call plug#end()
