@@ -1,7 +1,6 @@
 [user]
   name = Filipe Costa
-  email = filipebarcos@stripe.com
-	signingKey = D4B22BC3A97C336C296B031BF2509C1631F3AEA8
+  email = filipebarcos@gmail.com
 
 [credential]
   helper = osxkeychain
