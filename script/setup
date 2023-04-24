@@ -8,6 +8,7 @@ DOTFILES_ROOT="`pwd`"
 echo "  🔨 Creating required folders..."
 [ -d ~/tmp ] || mkdir ~/tmp
 [ -d ~/src ] || mkdir ~/src
+[ -d ~/Screenshots ] || mkdir ~/Screenshots
 [ -d ~/.config ] || mkdir ~/.config
 [ -d ~/.config/local ] || mkdir ~/.config/local
 [ -d ~/.config/local/share ] || mkdir ~/.config/local/share
