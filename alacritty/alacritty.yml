@@ -20,7 +20,7 @@ window:
   opacity: 1.0
 
   dimensions:
-    columns: 120
+    columns: 180
     lines: 40
 
   # Adds this many blank pixels of padding around the window
