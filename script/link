@@ -18,6 +18,7 @@ link_files "git/gitconfig" ".gitconfig"
 link_files "ruby/gemrc" ".gemrc"
 link_files "ruby/irbrc" ".irbrc"
 link_files "starship/starship.toml" ".config/starship.toml"
+link_files "rtx/config.toml" ".config/rtx/config.toml"
 link_files "tmux/tmux.conf" ".tmux.conf"
 
 link_files "vim/vimrc.base" ".vimrc.base"

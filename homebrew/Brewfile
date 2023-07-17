@@ -1,6 +1,4 @@
 cask_args appdir: '/Applications'
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 
 brew 'autoconf'
 brew 'automake'
@@ -37,7 +35,7 @@ brew 'fzf'
 brew 'ripgrep'
 brew 'universal-ctags/universal-ctags/universal-ctags', args: ['HEAD']
 brew 'git-delta'
-brew 'asdf'
+brew 'rtx'
 brew 'xz'
 
 cask 'appcleaner'
@@ -45,6 +43,3 @@ cask 'rectangle'
 cask 'spotify'
 cask 'the-unarchiver'
 cask 'visual-studio-code'
-cask 'alfred'
-
-mas 'amphetamine', id: 937984704

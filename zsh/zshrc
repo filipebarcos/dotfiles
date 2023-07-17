@@ -22,8 +22,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# asdf
-. $(brew --prefix asdf)/libexec/asdf.sh
+# rtx (relaces asdf)
+eval "$(/opt/homebrew/bin/rtx activate zsh)"
 
 # Rust/Cargo
 . "$HOME/.cargo/env"

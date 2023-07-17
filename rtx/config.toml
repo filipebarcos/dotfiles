@@ -1,0 +1,4 @@
+[tools]
+ruby = '3.2.2'
+[settings]
+asdf_compat = true
