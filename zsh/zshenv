@@ -14,6 +14,9 @@ export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
 export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
 
+# Ruby
+export RUBY_DEBUG_NO_RELINE=1
+
 # Elixir
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -30,6 +33,8 @@ PATH="$CARGO_PATH/bin:$PATH"
 PATH="$ZSH/bin:$PATH"
 PATH="$HOME/bin:$PATH"
 PATH="$PATH:/usr/local/opt/fzf/bin"
+PATH="$HOME/.local/share/rtx/shims:$PATH"
+PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export -U PATH
 
 export LC_ALL=en_US.UTF-8
