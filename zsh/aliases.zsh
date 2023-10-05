@@ -84,7 +84,7 @@ alias ras='be rails s'
 
 alias migrate='bundle exec rake db:migrate db:test:clone'
 alias rrst='bundle exec rake db:reset'
-alias br='be rspec'
+alias br='clear && be rspec'
 
 # Tmux
 alias tmux="tmux -2"
