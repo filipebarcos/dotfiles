@@ -40,6 +40,7 @@ set noshowmode                 " Lightline already shows the mode, no need to sh
 
 set ignorecase                 " Case-insensitive searching
 set smartcase                  " Case-sensitive IF contains a capital letter
+set smarttab                   " Tab to indent, backspace to unindent
 
 set wildmenu                      " Enhanced command line completion
 set wildmode=longest,list:longest " Complete files like shell
