@@ -49,25 +49,12 @@ cabbrev ack Ack!
 cabbrev Ack Ack!
 cabbrev rg Ack!
 
-" Vim-test #####################################################################
-let test#strategy = {
-  \ 'nearest': 'vimux',
-  \ 'file':    'vimux',
-  \ 'suite':   'vimux' }
-
-map <silent> <LocalLeader>l :TestLast<CR>
-map <silent> <LocalLeader>t :TestFile<CR>
-map <silent> <LocalLeader>r :TestNearest<CR>
-
 " Vim Commentary ###############################################################
 vmap \\ :Commentary<CR>
 nmap \\ :Commentary<CR>
 
 " Vimux ########################################################################
 map <silent> <LocalLeader>vq :VimuxCloseRunner<CR>
-
-" vim-elixir ##################################################################
-au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
 
 " Disable Autocomment
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

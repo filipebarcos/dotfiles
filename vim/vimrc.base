@@ -93,3 +93,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+
+" Copy path to clipboard
+command! CopyPath :let @*=expand('%')
+noremap <leader>cp :CopyPath<CR>
