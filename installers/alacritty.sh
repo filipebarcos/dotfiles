@@ -23,6 +23,7 @@ then
   echo "  🔨 Building"
   make app
   cp -r target/release/osx/Alacritty.app /Applications/Alacritty.app
+  git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 fi
 
 echo "  ✅ Alacritty"
