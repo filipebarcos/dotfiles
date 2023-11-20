@@ -15,6 +15,7 @@ echo "  🔨 Creating required folders..."
 [ -d ~/.config/cache ] || mkdir ~/.config/cache
 [ -d ~/.config/zsh ] || mkdir ~/.config/zsh
 [ -d ~/.config/alacritty ] || mkdir ~/.config/alacritty
+[ -d ~/.config/alacritty/themes ] || mkdir ~/.config/alacritty/themes
 [ -d ~/.config/nvim ] || mkdir ~/.config/nvim
 [ -d ~/.config/rtx ] || mkdir ~/.config/rtx
 echo "  ✅ Done creating required folders!"
