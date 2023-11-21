@@ -64,6 +64,27 @@ require('fzf-lua').setup({
   fzf_opts = {
     ['--layout'] = 'reverse-list'
   },
+  fzf_colors = {
+    ['fg'] = { 'fg', 'CursorLine' },
+    ['bg'] = { 'bg', 'Normal' },
+    ['hl'] = { 'fg', 'Comment' },
+    ['fg+'] = { 'fg', 'Normal' },
+    ['bg+'] = { 'bg', 'PmenuSel' },
+    ['hl+'] = { 'fg', 'Statement', 'italic' },
+    ['info'] = { 'fg', 'Comment', 'italic' },
+    ['prompt'] = { 'fg', 'Underlined' },
+    ['pointer'] = { 'fg', 'Exception' },
+    ['marker'] = { 'fg', '@character' },
+    ['spinner'] = { 'fg', 'DiagnosticOk' },
+    ['header'] = { 'fg', 'Comment' },
+    ['gutter'] = { 'bg', 'Normal' },
+    ['separator'] = { 'fg', 'Comment' },
+  },
+  keymap = {
+    fzf = {
+      ['esc'] = 'abort',
+    },
+  },
 })
 
 require('nvim-tree').setup({
