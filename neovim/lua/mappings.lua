@@ -27,9 +27,10 @@ vim.api.nvim_set_keymap('t', '<C-k>', '<C-\\><C-n><C-k>', {noremap = true, silen
 vim.api.nvim_set_keymap('t', '<C-l>', '<C-\\><C-n><C-l>', {noremap = true, silent = true})
 
 -- Mappings for plugins
--- FZF
+-- FZF-lua
 vim.api.nvim_set_keymap('n', '<leader>ff', "<cmd>lua require('fzf-lua').files()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>fb', "<cmd>lua require('fzf-lua').buffers()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>g', ":Rg <C-r><C-w><CR>", {noremap = true, silent = true})
 
 -- Vim Commentary
 vim.api.nvim_set_keymap('v', '\\\\', ':Commentary<CR>', {noremap = false, silent = false})
@@ -43,3 +44,6 @@ vim.api.nvim_set_keymap('n', '<leader>ss', ':source ~/.config/nvim/init.lua<CR>'
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<leader>nt', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>nf', ':NvimTreeFindFile<CR>', {noremap = true, silent = true})
+
+
+
