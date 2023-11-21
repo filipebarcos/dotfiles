@@ -1,0 +1,5 @@
+require("base")
+require("plugins")
+require("aesthetic")
+require("mappings")
+require("autocmd")
