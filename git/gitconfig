@@ -32,7 +32,7 @@
   pushf = push --force-with-lease
   pusho = push -u origin HEAD
   pam = !$ZSH/bin/git-pam
-  pom = pull origin master
+  pom = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git pull origin $PROJ_BRANCH"
   prom = pom --rebase
   goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
   update-commit-graph = !"git show-ref -s | git commit-graph write --stdin-commits"
