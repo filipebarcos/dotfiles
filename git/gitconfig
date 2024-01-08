@@ -28,11 +28,11 @@
   stsh= stash --keep-index
   staash= stash --include-untracked
   staaash= stash --all
-  clean-branches= !"git branch | grep -v master | xargs git branch -D"
+  clean-branches= !"git branch | grep -v master | grep -v main | xargs git branch -D"
   pushf = push --force-with-lease
   pusho = push -u origin HEAD
   pam = !$ZSH/bin/git-pam
-  pom = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git pull origin $PROJ_BRANCH"
+  pom = pull origin master
   prom = pom --rebase
   goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
   update-commit-graph = !"git show-ref -s | git commit-graph write --stdin-commits"
