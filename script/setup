@@ -19,7 +19,7 @@ echo "  🔨 Creating required folders..."
 [ -d ~/.config/nvim ] || mkdir ~/.config/nvim
 [ -d ~/.config/nvim/lua ] || mkdir ~/.config/nvim/lua
 [ -d ~/.config/nvim/colorschemes ] || mkdir ~/.config/nvim/colorschemes
-[ -d ~/.config/rtx ] || mkdir ~/.config/rtx
+[ -d ~/.config/mise ] || mkdir ~/.config/mise
 echo "  ✅ Done creating required folders!"
 
 echo "  🔗 Linking files..."
