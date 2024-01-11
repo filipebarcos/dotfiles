@@ -9,6 +9,7 @@
 	browser = google-chrome
 
 [alias]
+  default-branch = "!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@' | sed -e 's/\\n//'"
   co = checkout
   ci = commit
   st = status
@@ -28,11 +29,11 @@
   stsh= stash --keep-index
   staash= stash --include-untracked
   staaash= stash --all
-  clean-branches= !"git branch | grep -v master | grep -v main | xargs git branch -D"
+  clean-branches= !"git branch | grep -v $(git default-branch) | xargs git branch -D"
   pushf = push --force-with-lease
   pusho = push -u origin HEAD
   pam = !$ZSH/bin/git-pam
-  pom = pull origin master
+  pom = !"git pull origin $(git default-branch)"
   prom = pom --rebase
   goto = "!f() { TARGET=$(git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short)' | fzf); git checkout $TARGET; };  f"
   update-commit-graph = !"git show-ref -s | git commit-graph write --stdin-commits"
