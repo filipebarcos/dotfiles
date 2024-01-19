@@ -64,7 +64,6 @@
   diffFilter = delta --color-only
 
 [delta]
-  syntax-theme = ayu_light
   line-numbers = true
 
 [apply]
