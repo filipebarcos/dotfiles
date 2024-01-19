@@ -18,7 +18,7 @@ link_files "git/gitconfig" ".gitconfig"
 link_files "ruby/gemrc" ".gemrc"
 link_files "ruby/irbrc" ".irbrc"
 link_files "starship/starship.toml" ".config/starship.toml"
-link_files "mise/settings.toml" ".config/mise/settings.toml"
+link_files "mise/config.toml" ".config/mise/config.toml"
 link_files "tmux/tmux.conf" ".tmux.conf"
 
 link_files "neovim/init.lua" ".config/nvim/init.lua"
