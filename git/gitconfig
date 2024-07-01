@@ -12,6 +12,8 @@
   default-branch = "!git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@' | sed -e 's/\\n//'"
   co = checkout
   ci = commit
+  who = blame
+  last = log -1
   st = status
   br = branch
   type = cat-file -t
