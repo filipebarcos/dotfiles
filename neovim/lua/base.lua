@@ -14,7 +14,7 @@ vim.opt.lazyredraw = true   -- scroll
 vim.opt.wildmenu = true     -- show command completion menu
 vim.opt.backspace = 'indent,eol,start' -- backspace through everything in insert mode
 vim.opt.laststatus = 2      -- always show status line
-vim.o.colorcolumn = 120     -- 120 chars line
+vim.o.colorcolumn = "120"     -- 120 chars line
 vim.opt.scrolloff = 3       -- keep 3 lines when scrolling
 vim.opt.cmdheight = 1       -- height of command bar
 vim.opt.updatetime = 200    -- faster completion
@@ -48,7 +48,7 @@ vim.opt.undoreload = 10000
 -- Disable swap files
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.o.nowrb = true
+-- vim.o.nowrb = true
 
 vim.opt.autoindent = true
 vim.opt.hlsearch = true                -- Highlight matches
